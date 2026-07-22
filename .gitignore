@@ -1,0 +1,11 @@
+# Dependances : reinstallees par npm install, jamais versionnees.
+/node_modules/
+
+# Sorties de build (installateurs, application decompressee).
+/dist/
+
+# Journaux npm et rejets d'editeurs.
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db

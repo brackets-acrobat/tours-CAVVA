@@ -1,0 +1,23 @@
+# Fins de ligne normalisees en LF dans le depot : sans cela, chaque poste
+# reintroduirait des differences de fins de ligne dans les diffs.
+* text=auto eol=lf
+
+# EXCEPTION : le fichier des tours et sa signature ne subissent AUCUNE
+# conversion. La signature HMAC porte sur les octets exacts du CSV — une fin
+# de ligne reecrite au passage suffirait a la rendre fausse, et l'application
+# refuserait les tours sans que rien n'explique pourquoi. Le CSV est de plus
+# encode en Windows-1252, pas en UTF-8.
+tours01.csv -text
+tours01.csv.sig -text
+
+# Donnees des aeroports : 70 Mo lus ligne a ligne. Traitees comme un binaire,
+# git n'essaie ni de les normaliser ni d'en calculer un diff.
+airports-msfs.jsonl binary
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.dat binary
+*.docx binary
+*.xlsx binary

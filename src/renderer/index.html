@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tours CAVVA</title>
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="toolbar">
+      <select id="tourSelect" class="control"></select>
+      <button id="viewBtn" class="control btn" data-i18n="selectBtn">Sélectionner ce tour</button>
+      <button id="awardsBtn" class="control btn awards" data-i18n="awardsBtn">Badges et statistiques</button>
+      <div class="spacer"></div>
+      <span id="tourInfo" class="info"></span>
+      <button
+        id="apiKeyBtn"
+        class="control btn key"
+        data-i18n="apiKeyBtn"
+        data-i18n-title="apiKeyTitle"
+      >
+        Clé API
+      </button>
+      <button id="langToggle" class="control btn toggle" data-i18n-title="toggleTitle">FR</button>
+    </header>
+
+    <!-- Bandeau d'alerte : tours indisponibles, ou progression rejetée.
+         Le texte est posé par renderer.js (clé i18n selon le cas). -->
+    <div id="dataWarning" class="warning-bar" hidden>
+      <span id="warningText"></span>
+      <button id="warningRetry" class="warning-btn" data-i18n="retry" hidden>Réessayer</button>
+      <button id="warningClose" class="warning-close" data-i18n-title="close">×</button>
+    </div>
+
+    <div id="content">
+      <!-- Panneau gauche (1/3) : boutons + tableau des étapes. Masqué tant
+           qu'aucun tour n'a été « sélectionné ». -->
+      <aside id="tourPanel" hidden>
+        <div id="panelButtons">
+          <div class="btn-row">
+            <button id="btnStartTour" class="btn panel-btn" data-i18n="startTour">Commencer le tour</button>
+            <button id="btnResetTour" class="btn panel-btn ghost" data-i18n="resetTour">Réinitialiser le tour</button>
+          </div>
+          <button id="btnLeg" class="btn panel-btn accent" data-i18n="startLeg">Commencer l'étape</button>
+        </div>
+        <div id="simStatus" class="sim-status"></div>
+        <div id="legsTableWrap">
+          <table id="legsTable">
+            <thead>
+              <tr>
+                <th class="num" data-i18n="colLeg">Étape</th>
+                <th data-i18n="colFrom">Départ</th>
+                <th data-i18n="colTo">Arrivée</th>
+                <th class="num" data-i18n="colDist">Distance (nm)</th>
+              </tr>
+            </thead>
+            <tbody id="legsBody"></tbody>
+          </table>
+        </div>
+      </aside>
+
+      <!-- Panneau droit (2/3) : carte -->
+      <div id="map"></div>
+    </div>
+
+    <!-- Modale « Badges et statistiques » : totaux tous tours confondus
+         + badges des tours entièrement terminés. -->
+    <div id="awardsModal" class="modal" hidden>
+      <div id="awardsBackdrop" class="modal-backdrop"></div>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="awardsTitle">
+        <header class="modal-head">
+          <h2 id="awardsTitle" data-i18n="awardsTitle">Badges et statistiques</h2>
+          <button id="awardsClose" class="modal-close" data-i18n-title="close">×</button>
+        </header>
+        <div class="modal-body">
+          <div id="awardsStats" class="stats-grid"></div>
+          <h3 class="awards-sub" data-i18n="awardsBadgesTitle">Badges obtenus</h3>
+          <p id="awardsEmpty" class="awards-empty" data-i18n="awardsNone" hidden>
+            Aucun tour terminé pour le moment.
+          </p>
+          <div id="awardsBadges" class="badge-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale « Clé API » : accès réservé aux membres inscrits sur
+         cavva.sixk.me. La clé saisie est vérifiée auprès du serveur avant
+         d'être enregistrée. -->
+    <div id="apiKeyModal" class="modal" hidden>
+      <div id="apiKeyBackdrop" class="modal-backdrop"></div>
+      <div class="modal-box narrow" role="dialog" aria-modal="true" aria-labelledby="apiKeyTitle">
+        <header class="modal-head">
+          <h2 id="apiKeyTitle" data-i18n="apiKeyTitle">Clé API du compte CAVVA</h2>
+          <button id="apiKeyClose" class="modal-close" data-i18n-title="close">×</button>
+        </header>
+        <div class="modal-body">
+          <p class="form-intro" data-i18n="apiKeyIntro">
+            L'accès aux tours est réservé aux membres inscrits sur cavva.sixk.me.
+          </p>
+          <button id="apiKeySite" class="link-btn" data-i18n="apiKeyOpenSite">
+            Ouvrir la page Compte
+          </button>
+
+          <label class="form-label" for="apiKeyInput" data-i18n="apiKeyLabel">Clé API</label>
+          <div class="form-row">
+            <input
+              id="apiKeyInput"
+              type="password"
+              class="form-input"
+              autocomplete="off"
+              spellcheck="false"
+              data-i18n-placeholder="apiKeyPlaceholder"
+            />
+            <button id="apiKeyReveal" class="reveal-btn" data-i18n-title="apiKeyShow">👁</button>
+          </div>
+
+          <p id="apiKeyState" class="form-state"></p>
+          <p id="apiKeyFeedback" class="form-feedback" hidden></p>
+
+          <div class="form-actions">
+            <button id="apiKeyDelete" class="btn ghost-btn" data-i18n="apiKeyDelete" hidden>
+              Supprimer la clé
+            </button>
+            <div class="spacer"></div>
+            <button id="apiKeySave" class="btn" data-i18n="apiKeySave">Enregistrer et vérifier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bibliothèque cartographique (vendorisée) -->
+    <script src="vendor/leaflet/leaflet.js"></script>
+
+    <!-- Traductions (doit précéder les fonctionnalités et le renderer) -->
+    <script src="i18n.js"></script>
+
+    <!-- Fonctionnalités : un fichier par fonctionnalité -->
+    <script src="js/features/map.js"></script>
+    <script src="js/features/leg-arrows.js"></script>
+    <script src="js/features/route.js"></script>
+    <script src="js/features/tour-panel.js"></script>
+    <script src="js/features/sim-tracking.js"></script>
+    <script src="js/features/tour-select.js"></script>
+    <script src="js/features/awards.js"></script>
+    <script src="js/features/api-key.js"></script>
+    <script src="js/features/lang-toggle.js"></script>
+
+    <!-- Orchestrateur (câble le tout) -->
+    <script src="renderer.js"></script>
+  </body>
+</html>

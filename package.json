@@ -1,0 +1,77 @@
+{
+  "name": "tours-cavva",
+  "version": "1.0.0",
+  "description": "Suivi des tours aéronautiques VFR/IFR pour Microsoft Flight Simulator 2024 — bilingue FR/EN",
+  "main": "src/main/main.js",
+  "author": "Cyril MILANI",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "start": "electron .",
+    "force-electron": "node force-electron.js",
+    "sign-data": "node build/sign-data.js",
+    "demo-progress": "node build/demo-progress.js",
+    "dist": "npm run sign-data && electron-builder",
+    "publish": "npm run sign-data && electron-builder --publish always"
+  },
+  "keywords": [
+    "electron",
+    "msfs",
+    "vfr",
+    "ifr",
+    "tours",
+    "navigation"
+  ],
+  "devDependencies": {
+    "@electron/get": "^5.0.0",
+    "electron": "^32.0.0",
+    "electron-builder": "^24.13.3",
+    "extract-zip": "^2.0.1",
+    "fs-extra": "^11.3.6"
+  },
+  "build": {
+    "appId": "me.sixk.tourscavva.desktop",
+    "productName": "Tours CAVVA",
+    "copyright": "Copyright © 2026 Cyril MILANI — GPL-3.0-or-later",
+    "artifactName": "Tours-CAVVA-Setup-${version}.${ext}",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!build/**",
+      "!force-electron.js",
+      "!**/*.md",
+      "!tours01.csv",
+      "!tours01.csv.sig",
+      "!src/img/**",
+      "!airports-msfs.jsonl"
+    ],
+    "extraResources": [
+      "airports-msfs.jsonl"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Tours CAVVA"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "brackets-acrobat",
+      "repo": "tours-cavva"
+    }
+  },
+  "dependencies": {
+    "node-simconnect": "^4.2.0"
+  }
+}

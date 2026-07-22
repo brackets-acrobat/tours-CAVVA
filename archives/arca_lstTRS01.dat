@@ -1,0 +1,236 @@
+France VFR;T;014;LFMA;LFCM;VFR
+France VFR;T;015;LFCM;LFCY;VFR
+France VFR;T;016;LFCY;LFOV;VFR
+France VFR;T;017;LFOV;LFEC;VFR
+France VFR;T;018;LFEC;LFRG;VFR
+France VFR;T;019;LFRG;LFQJ;VFR
+France VFR;T;020;LFQJ;LFPN;VFR
+France VFR;T;021;LFPN;LFEK;VFR
+France VFR;T;022;LFEK;LFSU;VFR
+France VFR;T;023;LFSU;LFGJ;VFR
+France VFR;T;024;LFGJ;LFHT;VFR
+France VFR;T;025;LFHT;LFKT;VFR
+France VFR;T;026;LFKT;LFMA;VFR
+France ULM;T;481;LFLM;LFQW;VFR
+France ULM;T;482;LFQW;LFJY;VFR
+France ULM;T;483;LFJY;EBNM;VFR
+France ULM;T;484;EBNM;LFAC;VFR
+France ULM;T;485;LFAC;LFOI;VFR
+France ULM;T;486;LFOI;LFOY;VFR
+France ULM;T;487;LFOY;LFON;VFR
+France ULM;T;488;LFON;LFRM;VFR
+France ULM;T;489;LFRM;LFEF;VFR
+France ULM;T;490;LFEF;LFQG;VFR
+France ULM;T;491;LFQG;LFLM;VFR
+Grece VFR;T;492;LGST;LGRD;VFR
+Grece VFR;T;493;LGRD;LGSM;VFR
+Grece VFR;T;494;LGSM;LGMT;VFR
+Grece VFR;T;495;LGMT;LGAL;VFR
+Grece VFR;T;496;LGAL;LGAX;VFR
+Grece VFR;T;497;LGAX;LGKR;VFR
+Grece VFR;T;498;LGKR;LGSK;VFR
+Grece VFR;T;499;LGSK;LGZA;VFR
+Grece VFR;T;500;LGZA;LGKC;VFR
+Grece VFR;T;501;LGKC;LGSO;VFR
+Grece VFR;T;502;LGSO;LGPL;VFR
+Grece VFR;T;503;LGPL;LGST;VFR
+Norvege VFR;T;504;ENSN;ENSO;VFR
+Norvege VFR;T;505;ENSO;ENFL;VFR
+Norvege VFR;T;506;ENFL;ENKB;VFR
+Norvege VFR;T;507;ENKB;ENRM;VFR
+Norvege VFR;T;508;ENRM;ENRS;VFR
+Norvege VFR;T;509;ENRS;ENSK;VFR
+Norvege VFR;T;510;ENSK;ENHK;VFR
+Norvege VFR;T;511;ENHK;ENHV;VFR
+Norvege VFR;T;512;ENHV;ENSS;VFR
+Norvege VFR;T;513;ENSS;ENAT;VFR
+Norvege VFR;T;514;ENAT;ENNK;VFR
+Norvege VFR;T;515;ENNK;ENRA;VFR
+Norvege VFR;T;516;ENRA;ENNM;VFR
+Norvege VFR;T;517;ENNM;ENRO;VFR
+Norvege VFR;T;518;ENRO;ENHA;VFR
+Norvege VFR;T;519;ENHA;ENSN;VFR
+Suisse VFR;T;520;LSGL;LSZL;VFR
+Suisse VFR;T;521;LSZL;LSZT;VFR
+Suisse VFR;T;522;LSZT;LSZS;VFR
+Suisse VFR;T;523;LSZS;LSGE;VFR
+Suisse VFR;T;524;LSGE;LSZR;VFR
+Suisse VFR;T;525;LSZR;LSZJ;VFR
+Suisse VFR;T;526;LSZJ;LSPM;VFR
+Suisse VFR;T;527;LSPM;LSZI;VFR
+Suisse VFR;T;528;LSZI;LSGP;VFR
+Suisse VFR;T;529;LSGP;LSZE;VFR
+Suisse VFR;T;530;LSZE;LSGL;VFR
+Vignobles France ULM;T;550;LFKO;LFKC;VFR
+Vignobles France ULM;T;551;LFKC;LFTZ;VFR
+Vignobles France ULM;T;552;LFTZ;LFLU;VFR
+Vignobles France ULM;T;553;LFLU;LFHV;VFR
+Vignobles France ULM;T;554;LFHV;LFLP;VFR
+Vignobles France ULM;T;555;LFLP;LFGP;VFR
+Vignobles France ULM;T;556;LFGP;LFSP;VFR
+Vignobles France ULM;T;557;LFSP;LFGA;VFR
+Vignobles France ULM;T;558;LFGA;LFSN;VFR
+Vignobles France ULM;T;559;LFSN;LFSW;VFR
+Vignobles France ULM;T;560;LFSW;LFGH;VFR
+Vignobles France ULM;T;561;LFGH;LFOD;VFR
+Vignobles France ULM;T;562;LFOD;LFRZ;VFR
+Vignobles France ULM;T;563;LFRZ;LFDK;VFR
+Vignobles France ULM;T;564;LFDK;LFBE;VFR
+Vignobles France ULM;T;565;LFBE;LFDH;VFR
+Vignobles France ULM;T;566;LFDH;LFCC;VFR
+Vignobles France ULM;T;567;LFCC;LFMZ;VFR
+Vignobles France ULM;T;568;LFMZ;LFTW;VFR
+Vignobles France ULM;T;569;LFTW;LFMQ;VFR
+Afrique du sud VFR;T;658;FAPE;FAFO;VFR
+Afrique du sud VFR;T;659;FAFO;FAAN;VFR
+Afrique du sud VFR;T;660;FAAN;FAHU;VFR
+Afrique du sud VFR;T;661;FAHU;FXKA;VFR
+Afrique du sud VFR;T;662;FXKA;FAES;VFR
+Afrique du sud VFR;T;663;FAES;FDSM;VFR
+Afrique du sud VFR;T;664;FDSM;FABH;VFR
+Afrique du sud VFR;T;665;FABH;FALL;VFR
+Afrique du sud VFR;T;666;FALL;FAER;VFR
+Afrique du sud VFR;T;667;FAER;FABS;VFR
+Afrique du sud VFR;T;668;FABS;FADL;VFR
+Afrique du sud VFR;T;669;FADL;FAPT;VFR
+Afrique du sud VFR;T;670;FAPT;FAKH;VFR
+Afrique du sud VFR;T;671;FAKH;FAPD;VFR
+Afrique du sud VFR;T;672;FAPD;FASB;VFR
+Afrique du sud VFR;T;673;FASB;FAVR;VFR
+Afrique du sud VFR;T;674;FAVR;FARS;VFR
+Afrique du sud VFR;T;675;FARS;FAMO;VFR
+Afrique du sud VFR;T;676;FAMO;FAPE;VFR
+Japon du nord au sud;T;677;RJCW;RJCO;VFR
+Japon du nord au sud;T;678;RJCO;RJSR;VFR
+Japon du nord au sud;T;679;RJSR;RJSC;VFR
+Japon du nord au sud;T;680;RJSC;RJSD;VFR
+Japon du nord au sud;T;681;RJSD;RJTF;VFR
+Japon du nord au sud;T;682;RJTF;RJTQ;VFR
+Japon du nord au sud;T;683;RJTQ;RJNA;VFR
+Japon du nord au sud;T;684;RJNA;RJOT;VFR
+Japon du nord au sud;T;685;RJOT;RJDC;VFR
+Japon du nord au sud;T;686;RJDC;RJFM;VFR
+Japon du nord au sud;T;687;RJFM;RJFC;VFR
+Japon du nord au sud;T;688;RJFC;RJKA;VFR
+Japon du nord au sud;T;689;RJKA;RORY;VFR
+Japon du nord au sud;T;690;RORY;ROKJ;VFR
+Japon du nord au sud;T;691;ROKJ;ROMY;VFR
+Japon du nord au sud;T;692;ROMY;ROYN;VFR
+Nouvelle-Zelande;T;765;NZKT;NZGB;VFR
+Nouvelle-Zelande;T;766;NZGB;NZAR;VFR
+Nouvelle-Zelande;T;767;NZAR;NZAP;VFR
+Nouvelle-Zelande;T;768;NZAP;NZGS;VFR
+Nouvelle-Zelande;T;769;NZGS;NZDV;VFR
+Nouvelle-Zelande;T;770;NZDV;NZPN;VFR
+Nouvelle-Zelande;T;771;NZPN;NZRT;VFR
+Nouvelle-Zelande;T;772;NZRT;NZOA;VFR
+Nouvelle-Zelande;T;773;NZOA;NZDN;VFR
+Nouvelle-Zelande;T;774;NZDN;NZRC;VFR
+Nouvelle-Zelande;T;775;NZRC;NZMF;VFR
+Nouvelle-Zelande;T;776;NZMF;NZMC;VFR
+Nouvelle-Zelande;T;777;NZMC;NZHK;VFR
+Nouvelle-Zelande;T;778;NZHK;NZTK;VFR
+Nouvelle-Zelande;T;779;NZTK;NZHA;VFR
+Nouvelle-Zelande;T;780;NZHA;NZRA;VFR
+Nouvelle-Zelande;T;781;NZRA;NZRW;VFR
+Nouvelle-Zelande;T;782;NZRW;NZKT;VFR
+Royaume-Uni;T;783;EGHC;EGTU;VFR
+Royaume-Uni;T;784;EGTU;EGHJ;VFR
+Royaume-Uni;T;785;EGHJ;EGMT;VFR
+Royaume-Uni;T;786;EGMT;EGSV;VFR
+Royaume-Uni;T;787;EGSV;EGCF;VFR
+Royaume-Uni;T;788;EGCF;EGNC;VFR
+Royaume-Uni;T;789;EGNC;EGPN;VFR
+Royaume-Uni;T;790;EGPN;EGEO;VFR
+Royaume-Uni;T;791;EGEO;EGQK;VFR
+Royaume-Uni;T;792;EGQK;EGPA;VFR
+Royaume-Uni;T;793;EGPA;EGPO;VFR
+Royaume-Uni;T;794;EGPO;EGPR;VFR
+Royaume-Uni;T;795;EGPR;EGPI;VFR
+Royaume-Uni;T;796;EGPI;EIDL;VFR
+Royaume-Uni;T;797;EIDL;EIBT;VFR
+Royaume-Uni;T;798;EIBT;EICA;VFR
+Royaume-Uni;T;799;EICA;EIBN;VFR
+Royaume-Uni;T;800;EIBN;EIWF;VFR
+Royaume-Uni;T;801;EIWF;EGFE;VFR
+Royaume-Uni;T;802;EGFE;EGHU;VFR
+Royaume-Uni;T;803;EGHU;EGHC;VFR
+Italie;T;804;LIRU;LIBF;VFR
+Italie;T;805;LIBF;LINL;VFR
+Italie;T;806;LINL;LIBC;VFR
+Italie;T;807;LIBC;LICC;VFR
+Italie;T;808;LICC;LICG;VFR
+Italie;T;809;LICG;LICP;VFR
+Italie;T;810;LICP;LICR;VFR
+Italie;T;811;LICR;LIRI;VFR
+Italie;T;812;LIRI;LIBP;VFR
+Italie;T;813;LIBP;LIDG;VFR
+Italie;T;814;LIDG;LIPD;VFR
+Italie;T;815;LIPD;LIDT;VFR
+Italie;T;816;LIDT;LIME;VFR
+Italie;T;817;LIME;LIPV;VFR
+Italie;T;818;LIPV;LIDU;VFR
+Italie;T;819;LIDU;LILG;VFR
+Italie;T;820;LILG;LIMA;VFR
+Italie;T;821;LIMA;LIMJ;VFR
+Italie;T;822;LIMJ;LILQ;VFR
+Italie;T;823;LILQ;LIQB;VFR
+Italie;T;824;LIQB;LIRJ;VFR
+Italie;T;825;LIRJ;LIEO;VFR
+Italie;T;826;LIEO;LIRU;VFR
+Espagne Portugal;T;827;LELL;LECI;VFR
+Espagne Portugal;T;828;LECI;LEVT;VFR
+Espagne Portugal;T;829;LEVT;LEMR;VFR
+Espagne Portugal;T;830;LEMR;LENF;VFR
+Espagne Portugal;T;831;LENF;LEIR;VFR
+Espagne Portugal;T;832;LEIR;LPMI;VFR
+Espagne Portugal;T;833;LPMI;LPJF;VFR
+Espagne Portugal;T;834;LPJF;LPFA;VFR
+Espagne Portugal;T;835;LPFA;LEMF;VFR
+Espagne Portugal;T;836;LEMF;LEAX;VFR
+Espagne Portugal;T;837;LEAX;LELH;VFR
+Espagne Portugal;T;838;LELH;LERE;VFR
+Espagne Portugal;T;839;LERE;LERM;VFR
+Espagne Portugal;T;840;LERM;LECH;VFR
+Espagne Portugal;T;841;LECH;LESB;VFR
+Espagne Portugal;T;842;LESB;LELL;VFR
+Allemagne Benelux;T;894;EHDR;EHNR;VFR
+Allemagne Benelux;T;895;EHNR;EBAM;VFR
+Allemagne Benelux;T;896;EBAM;EBSP;VFR
+Allemagne Benelux;T;897;EBSP;ELUS;VFR
+Allemagne Benelux;T;898;ELUS;EDRL;VFR
+Allemagne Benelux;T;899;EDRL;EDSA;VFR
+Allemagne Benelux;T;900;EDSA;EDNS;VFR
+Allemagne Benelux;T;901;EDNS;EDPF;VFR
+Allemagne Benelux;T;902;EDPF;EDAJ;VFR
+Allemagne Benelux;T;903;EDAJ;EDCS;VFR
+Allemagne Benelux;T;904;EDCS;EDCV;VFR
+Allemagne Benelux;T;905;EDCV;EDBP;VFR
+Allemagne Benelux;T;906;EDBP;EDXR;VFR
+Allemagne Benelux;T;907;EDXR;EDHU;VFR
+Allemagne Benelux;T;908;EDHU;EDWL;VFR
+Allemagne Benelux;T;909;EDWL;EHDR;VFR
+Nationale 7 en ULM;T;910;LFPE;LFEM;VFR
+Nationale 7 en ULM;T;911;LFEM;LFQG;VFR
+Nationale 7 en ULM;T;912;LFQG;LFHY;VFR
+Nationale 7 en ULM;T;913;LFHY;LFLO;VFR
+Nationale 7 en ULM;T;914;LFLO;LFKL;VFR
+Nationale 7 en ULM;T;915;LFKL;LFHE;VFR
+Nationale 7 en ULM;T;916;LFHE;LFLQ;VFR
+Nationale 7 en ULM;T;917;LFLQ;LFNH;VFR
+Nationale 7 en ULM;T;918;LFNH;LFMA;VFR
+Nationale 7 en ULM;T;919;LFMA;LFMF;VFR
+Trail Appalaches;T;920;8B0;8B2;VFR
+Trail Appalaches;T;921;8B2;1B3;VFR
+Trail Appalaches;T;922;1B3;KDDH;VFR
+Trail Appalaches;T;923;KDDH;44N;VFR
+Trail Appalaches;T;924;44N;7PA3;VFR
+Trail Appalaches;T;925;7PA3;74N;VFR
+Trail Appalaches;T;926;74N;N68;VFR
+Trail Appalaches;T;927;N68;KFRR;VFR
+Trail Appalaches;T;928;KFRR;W13;VFR
+Trail Appalaches;T;929;W13;VA85;VFR
+Trail Appalaches;T;930;VA85;3NC7;VFR
+Trail Appalaches;T;931;3NC7;2NC0;VFR
+Trail Appalaches;T;932;2NC0;SC26;VFR
+Trail Appalaches;T;933;SC26;4GA9;VFR

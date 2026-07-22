@@ -1,0 +1,546 @@
+code;intitulé;ICAO départ;ICAO arrivée;régime de vol
+FR001;France ;LFMA;LFCM;VFR
+FR002;France ;LFCM;LFCY;VFR
+FR003;France ;LFCY;LFOV;VFR
+FR004;France ;LFOV;LFEC;VFR
+FR005;France ;LFEC;LFRG;VFR
+FR006;France ;LFRG;LFQJ;VFR
+FR007;France ;LFQJ;LFPN;VFR
+FR008;France ;LFPN;LFEK;VFR
+FR009;France ;LFEK;LFSU;VFR
+FR010;France ;LFSU;LFGJ;VFR
+FR011;France ;LFGJ;LFHT;VFR
+FR012;France ;LFHT;LFKT;VFR
+FR013;France ;LFKT;LFMA;VFR
+SW001;Suisse ;LSGL;LSZL;VFR
+SW002;Suisse ;LSZL;LSZT;VFR
+SW003;Suisse ;LSZT;LSZS;VFR
+SW004;Suisse ;LSZS;LSGE;VFR
+SW005;Suisse ;LSGE;LSZR;VFR
+SW006;Suisse ;LSZR;LSZJ;VFR
+SW007;Suisse ;LSZJ;LSPM;VFR
+SW008;Suisse ;LSPM;LSZI;VFR
+SW009;Suisse ;LSZI;LSGP;VFR
+SW010;Suisse ;LSGP;LSZE;VFR
+SW011;Suisse ;LSZE;LSGL;VFR
+IT001;Italie;LIRU;LIBF;VFR
+IT002;Italie;LIBF;LINL;VFR
+IT003;Italie;LINL;LIBC;VFR
+IT004;Italie;LIBC;LICC;VFR
+IT005;Italie;LICC;LICG;VFR
+IT006;Italie;LICG;LICP;VFR
+IT007;Italie;LICP;LICR;VFR
+IT008;Italie;LICR;LIRI;VFR
+IT009;Italie;LIRI;LIBP;VFR
+IT010;Italie;LIBP;LIDG;VFR
+IT011;Italie;LIDG;LIPD;VFR
+IT012;Italie;LIPD;LIDT;VFR
+IT013;Italie;LIDT;LIME;VFR
+IT014;Italie;LIME;LIPV;VFR
+IT015;Italie;LIPV;LIDU;VFR
+IT016;Italie;LIDU;LILG;VFR
+IT017;Italie;LILG;LIMA;VFR
+IT018;Italie;LIMA;LIMJ;VFR
+IT019;Italie;LIMJ;LILQ;VFR
+IT020;Italie;LILQ;LIQB;VFR
+IT021;Italie;LIQB;LIRJ;VFR
+IT022;Italie;LIRJ;LIEO;VFR
+IT023;Italie;LIEO;LIRU;VFR
+SPPT001;Espagne Portugal;LELL;LECI;VFR
+SPPT002;Espagne Portugal;LECI;LEVT;VFR
+SPPT003;Espagne Portugal;LEVT;LEMR;VFR
+SPPT004;Espagne Portugal;LEMR;LENF;VFR
+SPPT005;Espagne Portugal;LENF;LEIR;VFR
+SPPT006;Espagne Portugal;LEIR;LPMI;VFR
+SPPT007;Espagne Portugal;LPMI;LPJF;VFR
+SPPT008;Espagne Portugal;LPJF;LPFA;VFR
+SPPT009;Espagne Portugal;LPFA;LEMF;VFR
+SPPT010;Espagne Portugal;LEMF;LEAX;VFR
+SPPT011;Espagne Portugal;LEAX;LELH;VFR
+SPPT012;Espagne Portugal;LELH;LERE;VFR
+SPPT013;Espagne Portugal;LERE;LERM;VFR
+SPPT014;Espagne Portugal;LERM;LECH;VFR
+SPPT015;Espagne Portugal;LECH;LESB;VFR
+SPPT016;Espagne Portugal;LESB;LELL;VFR
+GBX001;Allemagne Benelux;EHDR;EHSE;VFR
+GBX002;Allemagne Benelux;EHSE;EBAM;VFR
+GBX003;Allemagne Benelux;EBAM;EBSP;VFR
+GBX004;Allemagne Benelux;EBSP;ELUS;VFR
+GBX005;Allemagne Benelux;ELUS;EDRL;VFR
+GBX006;Allemagne Benelux;EDRL;EDSA;VFR
+GBX007;Allemagne Benelux;EDSA;EDNS;VFR
+GBX008;Allemagne Benelux;EDNS;EDPF;VFR
+GBX009;Allemagne Benelux;EDPF;EDAJ;VFR
+GBX010;Allemagne Benelux;EDAJ;EDCS;VFR
+GBX011;Allemagne Benelux;EDCS;EDCV;VFR
+GBX012;Allemagne Benelux;EDCV;EDBP;VFR
+GBX013;Allemagne Benelux;EDBP;EDXR;VFR
+GBX014;Allemagne Benelux;EDXR;EDHU;VFR
+GBX015;Allemagne Benelux;EDHU;EDWL;VFR
+GBX016;Allemagne Benelux;EDWL;EHDR;VFR
+UK001;Royaume-Uni;EGHC;EGTU;VFR
+UK002;Royaume-Uni;EGTU;EGHJ;VFR
+UK003;Royaume-Uni;EGHJ;EGMT;VFR
+UK004;Royaume-Uni;EGMT;EGSV;VFR
+UK005;Royaume-Uni;EGSV;EGCF;VFR
+UK006;Royaume-Uni;EGCF;EGNC;VFR
+UK007;Royaume-Uni;EGNC;EGPN;VFR
+UK008;Royaume-Uni;EGPN;EGEO;VFR
+UK009;Royaume-Uni;EGEO;EGQK;VFR
+UK010;Royaume-Uni;EGQK;EGPA;VFR
+UK011;Royaume-Uni;EGPA;EGPO;VFR
+UK012;Royaume-Uni;EGPO;EGPR;VFR
+UK013;Royaume-Uni;EGPR;EGPI;VFR
+UK014;Royaume-Uni;EGPI;EIDL;VFR
+UK015;Royaume-Uni;EIDL;EIBT;VFR
+UK016;Royaume-Uni;EIBT;EICA;VFR
+UK017;Royaume-Uni;EICA;EIBN;VFR
+UK018;Royaume-Uni;EIBN;EIWF;VFR
+UK019;Royaume-Uni;EIWF;EGFE;VFR
+UK020;Royaume-Uni;EGFE;EGHU;VFR
+UK021;Royaume-Uni;EGHU;EGHC;VFR
+NO001;Norvege ;ENSN;ENSO;VFR
+NO002;Norvege ;ENSO;ENFL;VFR
+NO003;Norvege ;ENFL;ENKB;VFR
+NO004;Norvege ;ENKB;ENRM;VFR
+NO005;Norvege ;ENRM;ENRS;VFR
+NO006;Norvege ;ENRS;ENSK;VFR
+NO007;Norvege ;ENSK;ENHK;VFR
+NO008;Norvege ;ENHK;ENHV;VFR
+NO009;Norvege ;ENHV;ENSS;VFR
+NO010;Norvege ;ENSS;ENAT;VFR
+NO011;Norvege ;ENAT;ENNK;VFR
+NO012;Norvege ;ENNK;ENRA;VFR
+NO013;Norvege ;ENRA;ENNM;VFR
+NO014;Norvege ;ENNM;ENRO;VFR
+NO015;Norvege ;ENRO;ENHA;VFR
+NO016;Norvege ;ENHA;ENSN;VFR
+GR001;Grece ;LGST;LGRD;VFR
+GR002;Grece ;LGRD;LGSM;VFR
+GR003;Grece ;LGSM;LGMT;VFR
+GR004;Grece ;LGMT;LGAL;VFR
+GR005;Grece ;LGAL;LGAX;VFR
+GR006;Grece ;LGAX;LGKR;VFR
+GR007;Grece ;LGKR;LGSK;VFR
+GR008;Grece ;LGSK;LGZA;VFR
+GR009;Grece ;LGZA;LGKC;VFR
+GR010;Grece ;LGKC;LGSO;VFR
+GR011;Grece ;LGSO;LGPL;VFR
+GR012;Grece ;LGPL;LGST;VFR
+NZ001;Nouvelle-Zelande;NZKT;NZGB;VFR
+NZ002;Nouvelle-Zelande;NZGB;NZAR;VFR
+NZ003;Nouvelle-Zelande;NZAR;NZAP;VFR
+NZ004;Nouvelle-Zelande;NZAP;NZGS;VFR
+NZ005;Nouvelle-Zelande;NZGS;NZDV;VFR
+NZ006;Nouvelle-Zelande;NZDV;NZPN;VFR
+NZ007;Nouvelle-Zelande;NZPN;NZRT;VFR
+NZ008;Nouvelle-Zelande;NZRT;NZOA;VFR
+NZ009;Nouvelle-Zelande;NZOA;NZDN;VFR
+NZ010;Nouvelle-Zelande;NZDN;NZRC;VFR
+NZ011;Nouvelle-Zelande;NZRC;NZMF;VFR
+NZ012;Nouvelle-Zelande;NZMF;NZMC;VFR
+NZ013;Nouvelle-Zelande;NZMC;NZHK;VFR
+NZ014;Nouvelle-Zelande;NZHK;NZTK;VFR
+NZ015;Nouvelle-Zelande;NZTK;NZHA;VFR
+NZ016;Nouvelle-Zelande;NZHA;NZRA;VFR
+NZ017;Nouvelle-Zelande;NZRA;NZRW;VFR
+NZ018;Nouvelle-Zelande;NZRW;NZKT;VFR
+JNS001;Japon du nord au sud;RJCW;RJCO;VFR
+JNS002;Japon du nord au sud;RJCO;RJSR;VFR
+JNS003;Japon du nord au sud;RJSR;RJSC;VFR
+JNS004;Japon du nord au sud;RJSC;RJSD;VFR
+JNS005;Japon du nord au sud;RJSD;RJTF;VFR
+JNS006;Japon du nord au sud;RJTF;RJTQ;VFR
+JNS007;Japon du nord au sud;RJTQ;RJNA;VFR
+JNS008;Japon du nord au sud;RJNA;RJOT;VFR
+JNS009;Japon du nord au sud;RJOT;RJDC;VFR
+JNS010;Japon du nord au sud;RJDC;RJFM;VFR
+JNS011;Japon du nord au sud;RJFM;RJFC;VFR
+JNS012;Japon du nord au sud;RJFC;RJKA;VFR
+JNS013;Japon du nord au sud;RJKA;RORY;VFR
+JNS014;Japon du nord au sud;RORY;ROKJ;VFR
+JNS015;Japon du nord au sud;ROKJ;ROMY;VFR
+JNS016;Japon du nord au sud;ROMY;ROYN;VFR
+SA001;Afrique du sud ;FAPE;FAFO;VFR
+SA002;Afrique du sud ;FAFO;FAAN;VFR
+SA003;Afrique du sud ;FAAN;FAHU;VFR
+SA004;Afrique du sud ;FAHU;FXKA;VFR
+SA005;Afrique du sud ;FXKA;FAES;VFR
+SA006;Afrique du sud ;FAES;FDSM;VFR
+SA007;Afrique du sud ;FDSM;FABH;VFR
+SA008;Afrique du sud ;FABH;FALL;VFR
+SA009;Afrique du sud ;FALL;FAER;VFR
+SA010;Afrique du sud ;FAER;FABS;VFR
+SA011;Afrique du sud ;FABS;FADL;VFR
+SA012;Afrique du sud ;FADL;FAPT;VFR
+SA013;Afrique du sud ;FAPT;FAKH;VFR
+SA014;Afrique du sud ;FAKH;FAPD;VFR
+SA015;Afrique du sud ;FAPD;FASB;VFR
+SA016;Afrique du sud ;FASB;FAVR;VFR
+SA017;Afrique du sud ;FAVR;FARS;VFR
+SA018;Afrique du sud ;FARS;FAMO;VFR
+SA019;Afrique du sud ;FAMO;FAPE;VFR
+TA001;Trail Appalaches;8B0;8B2;VFR
+TA002;Trail Appalaches;8B2;1B3;VFR
+TA003;Trail Appalaches;1B3;KDDH;VFR
+TA004;Trail Appalaches;KDDH;44N;VFR
+TA005;Trail Appalaches;44N;7PA3;VFR
+TA006;Trail Appalaches;7PA3;74N;VFR
+TA007;Trail Appalaches;74N;N68;VFR
+TA008;Trail Appalaches;N68;KFRR;VFR
+TA009;Trail Appalaches;KFRR;W13;VFR
+TA010;Trail Appalaches;W13;VA85;VFR
+TA011;Trail Appalaches;VA85;3NC7;VFR
+TA012;Trail Appalaches;3NC7;2NC0;VFR
+TA013;Trail Appalaches;2NC0;SC26;VFR
+TA014;Trail Appalaches;SC26;4GA9;VFR
+FRU001;France ULM;LFLM;LFQW;VFR
+FRU002;France ULM;LFQW;LFJY;VFR
+FRU003;France ULM;LFJY;EBNM;VFR
+FRU004;France ULM;EBNM;LFAC;VFR
+FRU005;France ULM;LFAC;LFOI;VFR
+FRU006;France ULM;LFOI;LFOY;VFR
+FRU007;France ULM;LFOY;LFON;VFR
+FRU008;France ULM;LFON;LFRM;VFR
+FRU009;France ULM;LFRM;LFEF;VFR
+FRU010;France ULM;LFEF;LFQG;VFR
+FRU011;France ULM;LFQG;LFLM;VFR
+N7U001;Nationale 7 en ULM;LFPE;LFEM;VFR
+N7U002;Nationale 7 en ULM;LFEM;LFQG;VFR
+N7U003;Nationale 7 en ULM;LFQG;LFHY;VFR
+N7U004;Nationale 7 en ULM;LFHY;LFLO;VFR
+N7U005;Nationale 7 en ULM;LFLO;LFKL;VFR
+N7U006;Nationale 7 en ULM;LFKL;LFHE;VFR
+N7U007;Nationale 7 en ULM;LFHE;LFLQ;VFR
+N7U008;Nationale 7 en ULM;LFLQ;LFNH;VFR
+N7U009;Nationale 7 en ULM;LFNH;LFMA;VFR
+N7U010;Nationale 7 en ULM;LFMA;LFMF;VFR
+COU001;Compostelle ULM;LFMA;LFNG;VFR
+COU002;Compostelle ULM;LFNG;LFCK;VFR
+COU003;Compostelle ULM;LFCK;LFDH;VFR
+COU004;Compostelle ULM;LFDH;LFCO;VFR
+COU005;Compostelle ULM;LFCO;LEPP;VFR
+COU006;Compostelle ULM;LEPP;LEBG;VFR
+COU007;Compostelle ULM;LEBG;LELN;VFR
+COU008;Compostelle ULM;LELN;LERO;VFR
+COU009;Compostelle ULM;LERO;LEST;VFR
+CR001;Corse;LFKC;LFKT;VFR
+CR002;Corse;LFKT;LFKJ;VFR
+CR003;Corse;LFKJ;LFKO;VFR
+CR004;Corse;LFKO;LFKF;VFR
+CR005;Corse;LFKF;LFKB;VFR
+CR006;Corse;LFKB;LFKC;VFR
+PRO001;Provence;LFMA;LFNH;VFR
+PRO002;Provence;LFNH;LFMR;VFR
+PRO003;Provence;LFMR;LFMF;VFR
+PRO004;Provence;LFMF;LFMQ;VFR
+PRO005;Provence;LFMQ;LFMX;VFR
+PRO006;Provence;LFMX;LFMA;VFR
+APO001;Aeropostale (Reconstitution historique);LFCL;LELL;VFR
+APO002;Aeropostale (Reconstitution historique);LELL;LEAL;VFR
+APO003;Aeropostale (Reconstitution historique);LEAL;LEMG;VFR
+APO004;Aeropostale (Reconstitution historique);LEMG;GMTT;VFR
+APO005;Aeropostale (Reconstitution historique);GMTT;GMME;VFR
+APO006;Aeropostale (Reconstitution historique);GMME;GMMN;VFR
+APO007;Aeropostale (Reconstitution historique);GMMN;GMAD;VFR
+APO008;Aeropostale (Reconstitution historique);GMAD;GMML;VFR
+APO009;Aeropostale (Reconstitution historique);GMML;GMMH;VFR
+APO010;Aeropostale (Reconstitution historique);GMMH;GQPP;VFR
+APO011;Aeropostale (Reconstitution historique);GQPP;GOSS;VFR
+APO012;Aeropostale (Reconstitution historique);GOSS;GOOY;VFR
+APO013;Aeropostale (Reconstitution historique);GOOY;SBNT;VFR
+APO014;Aeropostale (Reconstitution historique);SBNT;SBRF;VFR
+APO015;Aeropostale (Reconstitution historique);SBRF;SBSV;VFR
+APO016;Aeropostale (Reconstitution historique);SBSV;SBCV;VFR
+APO017;Aeropostale (Reconstitution historique);SBCV;SBVT;VFR
+APO018;Aeropostale (Reconstitution historique);SBVT;SBRJ;VFR
+APO019;Aeropostale (Reconstitution historique);SBRJ;SBST;VFR
+APO020;Aeropostale (Reconstitution historique);SBST;SBFL;VFR
+APO021;Aeropostale (Reconstitution historique);SBFL;SBPA;VFR
+APO022;Aeropostale (Reconstitution historique);SBPA;SBPK;VFR
+APO023;Aeropostale (Reconstitution historique);SBPK;SUAA;VFR
+APO024;Aeropostale (Reconstitution historique);SUAA;SABE;VFR
+APO025;Aeropostale (Reconstitution historique);SABE;SAME;VFR
+APO026;Aeropostale (Reconstitution historique);SAME;SCBQ;VFR
+MN001;Maurice Noguès (Reconstitution historique);LFPB;LFML;VFR
+MN002;Maurice Noguès (Reconstitution historique);LFML;LIRN;VFR
+MN003;Maurice Noguès (Reconstitution historique);LIRN;LGKR;VFR
+MN004;Maurice Noguès (Reconstitution historique);LGKR;LGAV;VFR
+MN005;Maurice Noguès (Reconstitution historique);LGAV;LGKJ;VFR
+MN006;Maurice Noguès (Reconstitution historique);LGKJ;OLKA;VFR
+MN007;Maurice Noguès (Reconstitution historique);OLKA;OSDI;VFR
+MN008;Maurice Noguès (Reconstitution historique);OSDI;ORBI;VFR
+MN009;Maurice Noguès (Reconstitution historique);ORBI;OIBB;VFR
+MN010;Maurice Noguès (Reconstitution historique);OIBB;OIZJ;VFR
+MN011;Maurice Noguès (Reconstitution historique);OIZJ;OPKC;VFR
+MN012;Maurice Noguès (Reconstitution historique);OPKC;VIJO;VFR
+MN013;Maurice Noguès (Reconstitution historique);VIJO;VAAL;VFR
+MN014;Maurice Noguès (Reconstitution historique);VAAL;VECC;VFR
+MN015;Maurice Noguès (Reconstitution historique);VECC;VYSW;VFR
+MN016;Maurice Noguès (Reconstitution historique);VYSW;VYYY;VFR
+MN017;Maurice Noguès (Reconstitution historique);VYYY;VTBD;VFR
+MN018;Maurice Noguès (Reconstitution historique);VTBD;VVTS;VFR
+FM001;France - Madagascar (Reconstitution historique);LFPB;LFML;VFR
+FM002;France - Madagascar (Reconstitution historique);LFML;DAAG;VFR
+FM003;France - Madagascar (Reconstitution historique);DAAG;DAUE;VFR
+FM004;France - Madagascar (Reconstitution historique);DAUE;DAAR;VFR
+FM005;France - Madagascar (Reconstitution historique);DAAR;GAGO;VFR
+FM006;France - Madagascar (Reconstitution historique);GAGO;DRRN;VFR
+FM007;France - Madagascar (Reconstitution historique);DRRN;DRZR;VFR
+FM008;France - Madagascar (Reconstitution historique);DRZR;FTTJ;VFR
+FM009;France - Madagascar (Reconstitution historique);FTTJ;FTTA;VFR
+FM010;France - Madagascar (Reconstitution historique);FTTA;FEFF;VFR
+FM011;France - Madagascar (Reconstitution historique);FEFF;FZEA;VFR
+FM012;France - Madagascar (Reconstitution historique);FZEA;FZVS;VFR
+FM013;France - Madagascar (Reconstitution historique);FZVS;FZWA;VFR
+FM014;France - Madagascar (Reconstitution historique);FZWA;FZSA;VFR
+FM015;France - Madagascar (Reconstitution historique);FZSA;FZQM;VFR
+FM016;France - Madagascar (Reconstitution historique);FZQM;FZQA;VFR
+FM017;France - Madagascar (Reconstitution historique);FZQA;FLKW;VFR
+FM018;France - Madagascar (Reconstitution historique);FLKW;FQTT;VFR
+FM019;France - Madagascar (Reconstitution historique);FQTT;FQQL;VFR
+FM020;France - Madagascar (Reconstitution historique);FQQL;FQLU;VFR
+FM021;France - Madagascar (Reconstitution historique);FQLU;FMMO;VFR
+FM022;France - Madagascar (Reconstitution historique);FMMO;FMMI;VFR
+FIFR001;France IFR;LFML;LFOT;IFR
+FIFR002;France IFR;LFOT;LFBZ;IFR
+FIFR003;France IFR;LFBZ;LFSD;IFR
+FIFR004;France IFR;LFSD;LFKB;IFR
+FIFR005;France IFR;LFKB;LFJL;IFR
+FIFR006;France IFR;LFJL;LFRB;IFR
+FIFR007;France IFR;LFRB;LFQQ;IFR
+FIFR008;France IFR;LFQQ;LFMP;IFR
+FIFR009;France IFR;LFMP;LFPG;IFR
+FIFR010;France IFR;LFPG;LFLL;IFR
+FIFR011;France IFR;LFLL;LFOH;IFR
+FIFR012;France IFR;LFOH;LFRS;IFR
+FIFR013;France IFR;LFRS;LFML;IFR
+CE001;Capitales européennes IFR;LPPT;LEMD;IFR
+CE002;Capitales européennes IFR;LEMD;LFPG;IFR
+CE003;Capitales européennes IFR;LFPG;LJLJ;IFR
+CE004;Capitales européennes IFR;LJLJ;LSGG;IFR
+CE005;Capitales européennes IFR;LSGG;LIRF;IFR
+CE006;Capitales européennes IFR;LIRF;LGAV;IFR
+CE007;Capitales européennes IFR;LGAV;LROP;IFR
+CE008;Capitales européennes IFR;LROP;LATI;IFR
+CE009;Capitales européennes IFR;LATI;LHBP;IFR
+CE010;Capitales européennes IFR;LHBP;EPWA;IFR
+CE011;Capitales européennes IFR;EPWA;EDDT;IFR
+CE012;Capitales européennes IFR;EDDT;EGLL;IFR
+CE013;Capitales européennes IFR;EGLL;EKCH;IFR
+CE014;Capitales européennes IFR;EKCH;EFHK;IFR
+CE015;Capitales européennes IFR;EFHK;ENGM;IFR
+CE016;Capitales européennes IFR;ENGM;EETN;IFR
+CE017;Capitales européennes IFR;EETN;UUEE;IFR
+CE018;Capitales européennes IFR;UUEE;UMMS;IFR
+CE019;Capitales européennes IFR;UMMS;UKBB;IFR
+CE020;Capitales européennes IFR;UKBB;LYBE;IFR
+CE021;Capitales européennes IFR;LYBE;LUKK;IFR
+CE022;Capitales européennes IFR;LUKK;LKPR;IFR
+CE023;Capitales européennes IFR;LKPR;EBBR;IFR
+CE024;Capitales européennes IFR;EBBR;LZIB;IFR
+CE025;Capitales européennes IFR;LZIB;LWSK;IFR
+CE026;Capitales européennes IFR;LWSK;LDZA;IFR
+CE027;Capitales européennes IFR;LDZA;LBSF;IFR
+CE028;Capitales européennes IFR;LBSF;LQSA;IFR
+CE029;Capitales européennes IFR;LQSA;ELLX;IFR
+CE030;Capitales européennes IFR;ELLX;EIDW;IFR
+CE031;Capitales européennes IFR;EIDW;EHAM;IFR
+CE032;Capitales européennes IFR;EHAM;LOWW;IFR
+CE033;Capitales européennes IFR;LOWW;EYVI;IFR
+CE034;Capitales européennes IFR;EYVI;ESSA;IFR
+CE035;Capitales européennes IFR;ESSA;EVRA;IFR
+USIFR001;U.S.A IFR;KJFK;KCLT;IFR
+USIFR002;U.S.A IFR;KCLT;KMIA;IFR
+USIFR003;U.S.A IFR;KMIA;KMSY;IFR
+USIFR004;U.S.A IFR;KMSY;KDFW;IFR
+USIFR005;U.S.A IFR;KDFW;KPHX;IFR
+USIFR006;U.S.A IFR;KPHX;KSLC;IFR
+USIFR007;U.S.A IFR;KSLC;KSFO;IFR
+USIFR008;U.S.A IFR;KSFO;KSEA;IFR
+USIFR009;U.S.A IFR;KSEA;KBIL;IFR
+USIFR010;U.S.A IFR;KBIL;KDEN;IFR
+USIFR011;U.S.A IFR;KDEN;KMCI;IFR
+USIFR012;U.S.A IFR;KMCI;KORD;IFR
+USIFR013;U.S.A IFR;KORD;KATL;IFR
+USIFR014;U.S.A IFR;KATL;KTUL;IFR
+USIFR015;U.S.A IFR;KTUL;KROW;IFR
+USIFR016;U.S.A IFR;KROW;KLAS;IFR
+USIFR017;U.S.A IFR;KLAS;KPDX;IFR
+USIFR018;U.S.A IFR;KPDX;KBOI;IFR
+USIFR019;U.S.A IFR;KBOI;KCPR;IFR
+USIFR020;U.S.A IFR;KCPR;KMSP;IFR
+USIFR021;U.S.A IFR;KMSP;KDTW;IFR
+USIFR022;U.S.A IFR;KDTW;KMEM;IFR
+USIFR023;U.S.A IFR;KMEM;KCVG;IFR
+USIFR024;U.S.A IFR;KCVG;KJFK;IFR
+AFIFR001;Afrique IFR;DNAA;DFFD;IFR
+AFIFR002;Afrique IFR;DFFD;DBBB;IFR
+AFIFR003;Afrique IFR;DBBB;DRRN;IFR
+AFIFR004;Afrique IFR;DRRN;GABS;IFR
+AFIFR005;Afrique IFR;GABS;GOOY;IFR
+AFIFR006;Afrique IFR;GOOY;GUCY;IFR
+AFIFR007;Afrique IFR;GUCY;DIYO;IFR
+AFIFR008;Afrique IFR;DIYO;GLRB;IFR
+AFIFR009;Afrique IFR;GLRB;DGAA;IFR
+AFIFR010;Afrique IFR;DGAA;FKKD;IFR
+AFIFR011;Afrique IFR;FKKD;FEFF;IFR
+AFIFR012;Afrique IFR;FEFF;FTTJ;IFR
+AFIFR013;Afrique IFR;FTTJ;FOOL;IFR
+AFIFR014;Afrique IFR;FOOL;FZAA;IFR
+AFIFR015;Afrique IFR;FZAA;FNLU;IFR
+AFIFR016;Afrique IFR;FNLU;FYWH;IFR
+AFIFR017;Afrique IFR;FYWH;FBSK;IFR
+AFIFR018;Afrique IFR;FBSK;FXMM;IFR
+AFIFR019;Afrique IFR;FXMM;FQMA;IFR
+AFIFR020;Afrique IFR;FQMA;FVRG;IFR
+AFIFR021;Afrique IFR;FVRG;FAWK;IFR
+AFIFR022;Afrique IFR;FAWK;FWKI;IFR
+AFIFR023;Afrique IFR;FWKI;FMMI;IFR
+AFIFR024;Afrique IFR;FMMI;HTDA;IFR
+AFIFR025;Afrique IFR;HTDA;HBBA;IFR
+AFIFR026;Afrique IFR;HBBA;HKJK;IFR
+AFIFR027;Afrique IFR;HKJK;HRYR;IFR
+AFIFR028;Afrique IFR;HRYR;HJJJ;IFR
+AFIFR029;Afrique IFR;HJJJ;HUEN;IFR
+AFIFR030;Afrique IFR;HUEN;HAAB;IFR
+AFIFR031;Afrique IFR;HAAB;HCMM;IFR
+AFIFR032;Afrique IFR;HCMM;HDAM;IFR
+AFIFR033;Afrique IFR;HDAM;HHAS;IFR
+AFIFR034;Afrique IFR;HHAS;HSSK;IFR
+AFIFR035;Afrique IFR;HSSK;HECA;IFR
+AFIFR036;Afrique IFR;HECA;HLLT;IFR
+AFIFR037;Afrique IFR;HLLT;DTTA;IFR
+AFIFR038;Afrique IFR;DTTA;DAAG;IFR
+AFIFR039;Afrique IFR;DAAG;GMME;IFR
+AFIFR040;Afrique IFR;GMME;GMML;IFR
+AFIFR041;Afrique IFR;GMML;GQNN;IFR
+AFIFR042;Afrique IFR;GQNN;GATB;IFR
+AFIFR043;Afrique IFR;GATB;DNAA;IFR
+ASIFR001;Amérique du sud IFR;SBBR;SGAS;IFR
+ASIFR002;Amérique du sud IFR;SGAS;SUMU;IFR
+ASIFR003;Amérique du sud IFR;SUMU;SLSU;IFR
+ASIFR004;Amérique du sud IFR;SLSU;SAEZ;IFR
+ASIFR005;Amérique du sud IFR;SAEZ;SCEL;IFR
+ASIFR006;Amérique du sud IFR;SCEL;SLLP;IFR
+ASIFR007;Amérique du sud IFR;SLLP;SPJC;IFR
+ASIFR008;Amérique du sud IFR;SPJC;SEQU;IFR
+ASIFR009;Amérique du sud IFR;SEQU;SKBO;IFR
+ASIFR010;Amérique du sud IFR;SKBO;SVMI;IFR
+ASIFR011;Amérique du sud IFR;SVMI;SYCJ;IFR
+ASIFR012;Amérique du sud IFR;SYCJ;SMJP;IFR
+ASIFR013;Amérique du sud IFR;SMJP;SOCA;IFR
+CHIFR001;Provinces chinoises IFR;ZBAA;ZYHB;IFR
+CHIFR002;Provinces chinoises IFR;ZYHB;ZBTJ;IFR
+CHIFR003;Provinces chinoises IFR;ZBTJ;ZYCC;IFR
+CHIFR004;Provinces chinoises IFR;ZYCC;ZSJN;IFR
+CHIFR005;Provinces chinoises IFR;ZSJN;ZBHH;IFR
+CHIFR006;Provinces chinoises IFR;ZBHH;ZLIC;IFR
+CHIFR007;Provinces chinoises IFR;ZLIC;ZBYN;IFR
+CHIFR008;Provinces chinoises IFR;ZBYN;ZHCC;IFR
+CHIFR009;Provinces chinoises IFR;ZHCC;ZSSS;IFR
+CHIFR010;Provinces chinoises IFR;ZSSS;ZYTX;IFR
+CHIFR011;Provinces chinoises IFR;ZYTX;ZBSJ;IFR
+CHIFR012;Provinces chinoises IFR;ZBSJ;ZSOF;IFR
+CHIFR013;Provinces chinoises IFR;ZSOF;ZLXY;IFR
+CHIFR014;Provinces chinoises IFR;ZLXY;ZGHA;IFR
+CHIFR015;Provinces chinoises IFR;ZGHA;ZGNN;IFR
+CHIFR016;Provinces chinoises IFR;ZGNN;ZSFZ;IFR
+CHIFR017;Provinces chinoises IFR;ZSFZ;ZSNJ;IFR
+CHIFR018;Provinces chinoises IFR;ZSNJ;ZGGG;IFR
+CHIFR019;Provinces chinoises IFR;ZGGG;ZSHC;IFR
+CHIFR020;Provinces chinoises IFR;ZSHC;VHHH;IFR
+CHIFR021;Provinces chinoises IFR;VHHH;ZSCN;IFR
+CHIFR022;Provinces chinoises IFR;ZSCN;VMMC;IFR
+CHIFR023;Provinces chinoises IFR;VMMC;ZUGY;IFR
+CHIFR024;Provinces chinoises IFR;ZUGY;ZJHK;IFR
+CHIFR025;Provinces chinoises IFR;ZJHK;ZPPP;IFR
+CHIFR026;Provinces chinoises IFR;ZPPP;ZUCK;IFR
+CHIFR027;Provinces chinoises IFR;ZUCK;ZHHH;IFR
+CHIFR028;Provinces chinoises IFR;ZHHH;ZUUU;IFR
+CHIFR029;Provinces chinoises IFR;ZUUU;ZLLL;IFR
+CHIFR030;Provinces chinoises IFR;ZLLL;ZULS;IFR
+CHIFR031;Provinces chinoises IFR;ZULS;ZLXN;IFR
+CHIFR032;Provinces chinoises IFR;ZLXN;ZWWW;IFR
+FALI001;France IFR avions legers;LFKB;LFMD;IFR
+FALI002;France IFR avions legers;LFMD;LFLB;IFR
+FALI003;France IFR avions legers;LFLB;LFNB;IFR
+FALI004;France IFR avions legers;LFNB;LFBJ;Y
+FALI005;France IFR avions legers;LFBJ;LFLN;Z
+FALI006;France IFR avions legers;LFLN;LFSM;IFR
+FALI007;France IFR avions legers;LFSM;LFQB;IFR
+FALI008;France IFR avions legers;LFQB;LFST;IFR
+FALI009;France IFR avions legers;LFST;LFGW;Y
+FALI010;France IFR avions legers;LFGW;LFPN;Z
+FALI011;France IFR avions legers;LFPN;LFAC;IFR
+FALI012;France IFR avions legers;LFAC;LFRK;IFR
+FALI013;France IFR avions legers;LFRK;LFLX;IFR
+FALI014;France IFR avions legers;LFLX;LFOP;IFR
+FALI015;France IFR avions legers;LFOP;LFRW;Y
+FALI016;France IFR avions legers;LFRW;LFEC;Z
+FALI017;France IFR avions legers;LFEC;LFRS;IFR
+FALI018;France IFR avions legers;LFRS;LFBK;IFR
+FALI019;France IFR avions legers;LFBK;LFCR;IFR
+FALI020;France IFR avions legers;LFCR;LFBP;IFR
+FALI021;France IFR avions legers;LFBP;LFBG;Y
+FALI022;France IFR avions legers;LFBG;LFBR;Z
+FALI023;France IFR avions legers;LFBR;LFMT;IFR
+FALI024;France IFR avions legers;LFMT;LFMN;IFR
+FALI025;France IFR avions legers;LFMN;LFKJ;IFR
+MC001;Moyen-Courrier;LFMN;GMAD;IFR
+MC002;Moyen-Courrier;GMAD;DTTJ;IFR
+MC003;Moyen-Courrier;DTTJ;FTTJ;IFR
+MC004;Moyen-Courrier;FTTJ;HAAB;IFR
+MC005;Moyen-Courrier;HAAB;LLBG;IFR
+MC006;Moyen-Courrier;LLBG;OPKC;IFR
+MC007;Moyen-Courrier;OPKC;VECC;IFR
+MC008;Moyen-Courrier;VECC;RPLL;IFR
+MC009;Moyen-Courrier;RPLL;WATO;IFR
+MC010;Moyen-Courrier;WATO;AYPY;IFR
+MC011;Moyen-Courrier;AYPY;PGUM;IFR
+MC012;Moyen-Courrier;PGUM;RJTT;IFR
+MC013;Moyen-Courrier;RJTT;UHPP;IFR
+MC014;Moyen-Courrier;UHPP;PANC;IFR
+MC015;Moyen-Courrier;PANC;CYVR;IFR
+MC016;Moyen-Courrier;CYVR;MMCU;IFR
+MC017;Moyen-Courrier;MMCU;MHTG;IFR
+MC018;Moyen-Courrier;MHTG;SPJC;IFR
+MC019;Moyen-Courrier;SPJC;SOCA;IFR
+MC020;Moyen-Courrier;SOCA;MKJP;IFR
+MC021;Moyen-Courrier;MKJP;KORD;IFR
+MC022;Moyen-Courrier;KORD;CYQX;IFR
+MC023;Moyen-Courrier;CYQX;BIKF;IFR
+MC024;Moyen-Courrier;BIKF;LFMN;IFR
+MDIFR001;Méditerrranée IFR;LFMD;LFMP;IFR
+MDIFR002;Méditerrranée IFR;LFMP;LEBL;IFR
+MDIFR003;Méditerrranée IFR;LEBL;LEIB;IFR
+MDIFR004;Méditerrranée IFR;LEIB;LEAM;IFR
+MDIFR005;Méditerrranée IFR;LEAM;GMTT;IFR
+MDIFR006;Méditerrranée IFR;GMTT;DAOO;IFR
+MDIFR007;Méditerrranée IFR;DAOO;DAAG;IFR
+MDIFR008;Méditerrranée IFR;DAAG;DTKA;IFR
+MDIFR009;Méditerrranée IFR;DTKA;LICJ;IFR
+MDIFR010;Méditerrranée IFR;LICJ;LICD;IFR
+MDIFR011;Méditerrranée IFR;LICD;DTTJ;IFR
+MDIFR012;Méditerrranée IFR;DTTJ;HLLT;IFR
+MDIFR013;Méditerrranée IFR;HLLT;HLGD;IFR
+MDIFR014;Méditerrranée IFR;HLGD;HLMB;IFR
+MDIFR015;Méditerrranée IFR;HLMB;HLLQ;IFR
+MDIFR016;Méditerrranée IFR;HLLQ;HLTQ;IFR
+MDIFR017;Méditerrranée IFR;HLTQ;HEMM;IFR
+MDIFR018;Méditerrranée IFR;HEMM;HEBA;IFR
+MDIFR019;Méditerrranée IFR;HEBA;HEGR;IFR
+MDIFR020;Méditerrranée IFR;HEGR;LCLK;IFR
+MDIFR021;Méditerrranée IFR;LCLK;LTAI;IFR
+MDIFR022;Méditerrranée IFR;LTAI;LGRP;IFR
+MDIFR023;Méditerrranée IFR;LGRP;LGAV;IFR
+MDIFR024;Méditerrranée IFR;LGAV;LGKR;IFR
+MDIFR025;Méditerrranée IFR;LGKR;LDDU;IFR
+MDIFR026;Méditerrranée IFR;LDDU;LDZD;IFR
+MDIFR027;Méditerrranée IFR;LDZD;LIPZ;IFR
+MDIFR028;Méditerrranée IFR;LIPZ;LIBP;IFR
+MDIFR029;Méditerrranée IFR;LIBP;LIBG;IFR
+MDIFR030;Méditerrranée IFR;LIBG;LIRN;IFR
+MDIFR031;Méditerrranée IFR;LIRN;LIEO;IFR
+MDIFR032;Méditerrranée IFR;LIEO;LFKB;IFR
+MDIFR033;Méditerrranée IFR;LFKB;LFMD;IFR

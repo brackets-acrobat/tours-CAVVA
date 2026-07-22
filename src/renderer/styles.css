@@ -1,0 +1,615 @@
+/*
+ * Tours CAVVA — Desktop
+ * Copyright (C) 2026 Cyril MILANI — GPL-3.0-or-later
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #1f2933;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.control {
+  height: 36px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #3e4c59;
+}
+
+#tourSelect {
+  min-width: 260px;
+  max-width: 420px;
+  padding: 0 10px;
+  background: #fff;
+  color: #1f2933;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.awards {
+  background: #b45309;
+}
+
+.awards:hover {
+  background: #92400e;
+}
+
+.key {
+  background: #7c3aed;
+}
+
+.key:hover {
+  background: #6d28d9;
+}
+
+.toggle {
+  min-width: 52px;
+  background: #059669;
+}
+
+.toggle:hover {
+  background: #047857;
+}
+
+.info {
+  font-size: 13px;
+  color: #cbd5e1;
+  white-space: nowrap;
+}
+
+/* Zone principale sous la barre : panneau (1/3) + carte (2/3) */
+#content {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+#map {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Panneau gauche des étapes */
+#tourPanel {
+  width: 33.333%;
+  max-width: 33.333%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #f8fafc;
+  border-right: 1px solid #cbd5e1;
+}
+
+#tourPanel[hidden] {
+  display: none;
+}
+
+#panelButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.panel-btn {
+  height: 38px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Les deux boutons de la rangée se partagent la largeur à parts égales ;
+   « Commencer l'étape » (enfant direct de la colonne) occupe toute la largeur
+   et garde la même hauteur (38 px) que les autres. */
+.btn-row .panel-btn {
+  flex: 1 1 0;
+}
+
+.panel-btn.ghost {
+  background: #64748b;
+}
+
+.panel-btn.ghost:hover {
+  background: #475569;
+}
+
+.panel-btn.accent {
+  background: #e11900;
+}
+
+.panel-btn.accent:hover {
+  background: #b91500;
+}
+
+.panel-btn.accent.enroute {
+  background: #059669;
+}
+
+.panel-btn.accent.enroute:hover {
+  background: #047857;
+}
+
+/* Bouton inactif : doit primer sur les variantes colorées ci-dessus, d'où les
+   sélecteurs explicites (même spécificité, mais déclarés après). */
+.panel-btn:disabled,
+.panel-btn:disabled:hover,
+.panel-btn.accent:disabled,
+.panel-btn.accent:disabled:hover,
+.panel-btn.accent.enroute:disabled,
+.panel-btn.accent.enroute:disabled:hover {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.sim-status {
+  padding: 8px 10px;
+  min-height: 20px;
+  font-size: 12.5px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+  background: #eef2f7;
+}
+
+#legsTableWrap {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+#legsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+#legsTable thead th {
+  position: sticky;
+  top: 0;
+  background: #1f2933;
+  color: #fff;
+  padding: 8px 10px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#legsTable th.num,
+#legsTable td.num {
+  text-align: right;
+}
+
+#legsTable tbody td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1f2933;
+}
+
+/* Étape sélectionnée (courante, non commencée) */
+#legsTable tbody tr.current td {
+  background: #fef3c7;
+}
+
+/* Étape en cours (vérifiée, suivi actif) */
+#legsTable tbody tr.active td {
+  background: #fde68a;
+  font-weight: 700;
+}
+
+/* Étape validée (grisée) */
+#legsTable tbody tr.done td {
+  color: #94a3b8;
+  background: #f1f5f9;
+  text-decoration: line-through;
+}
+
+.waypoint-label {
+  font-weight: 600;
+}
+
+/* Flèche de sens dessinée sur chaque étape */
+.leg-arrow {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 18px;
+  color: #e11900;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+  pointer-events: none;
+}
+
+/* Marqueur de l'avion (suivi SimConnect), orienté selon le cap vrai */
+.plane-marker {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}
+
+/* Badge numéroté séquentiel de l'étape (1, 2, 3 …) */
+.leg-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e11900;
+  color: #fff;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  font: 700 11px/16px "Segoe UI", Roboto, Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+/* ---------- Modale « Badges et statistiques » ---------- */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.modal-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(860px, 100%);
+  max-height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #1f2933;
+  color: #fff;
+}
+
+.modal-head h2 {
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 17px;
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #3e4c59;
+}
+
+.modal-body {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 16px;
+}
+
+/* Tuiles de totaux (heures, distance, étapes, tours) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.stat-tile {
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2933;
+}
+
+.stat-label {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.awards-sub {
+  margin: 20px 0 10px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 6px;
+}
+
+.awards-empty {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Grille des badges des tours terminés (images 186 × 75, taille native) */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  gap: 16px 14px;
+}
+
+.badge-card {
+  margin: 0;
+  text-align: center;
+}
+
+.badge-card img {
+  width: 100%;
+  max-width: 186px;
+  height: auto;
+}
+
+.badge-card figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #334155;
+}
+
+/* ---------- Modale « Clé API » ---------- */
+
+.modal-box.narrow {
+  width: min(520px, 100%);
+}
+
+.form-intro {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* Lien d'ouverture de la page « Compte » (ouverte dans le navigateur système) */
+.link-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  color: #1d4ed8;
+}
+
+.form-label {
+  display: block;
+  margin: 16px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.form-row {
+  display: flex;
+  gap: 6px;
+}
+
+.form-input {
+  flex: 1 1 auto;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: Consolas, "Courier New", monospace;
+  color: #1f2933;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+.reveal-btn {
+  width: 38px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reveal-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Ligne d'état : clé enregistrée (masquée) ou absence de clé */
+.form-state {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+/* Retour de la vérification auprès du serveur */
+.form-feedback {
+  margin: 8px 0 0;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 12.5px;
+}
+
+.form-feedback[hidden] {
+  display: none;
+}
+
+.form-feedback.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.form-feedback.bad {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.form-feedback.info {
+  background: #eef2f7;
+  color: #334155;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.form-actions .btn {
+  height: 36px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.ghost-btn {
+  background: #64748b;
+}
+
+.ghost-btn:hover {
+  background: #475569;
+}
+
+.ghost-btn[hidden] {
+  display: none;
+}
+
+/* Bandeau d'alerte (progression rejetée) */
+.warning-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #fef3c7;
+  color: #7c2d12;
+  font-size: 13px;
+  border-bottom: 1px solid #fcd34d;
+}
+
+.warning-bar[hidden] {
+  display: none;
+}
+
+.warning-bar span {
+  flex: 1 1 auto;
+}
+
+.warning-btn {
+  height: 26px;
+  padding: 0 12px;
+  border: 1px solid #b45309;
+  border-radius: 5px;
+  background: #fde68a;
+  color: #7c2d12;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.warning-btn:hover {
+  background: #fcd34d;
+}
+
+.warning-btn[hidden] {
+  display: none;
+}
+
+.warning-close {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #7c2d12;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.warning-close:hover {
+  background: #fde68a;
+}

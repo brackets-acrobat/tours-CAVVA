@@ -1,0 +1,130 @@
+Corse;M;001;LFMA;LFKB;VFR
+Corse;M;002;LFKB;LFKF;VFR
+Corse;M;003;LFKF;LFKJ;VFR
+Corse;M;004;LFKJ;LFKC;VFR
+Corse;M;005;LFKC;LFML;VFR
+Corse;M;006;LFML;LFMA;VFR
+Provence;M;007;LFMA;LFNH;VFR
+Provence;M;008;LFNH;LFMR;VFR
+Provence;M;009;LFMR;LFMF;VFR
+Provence;M;010;LFMF;LFMQ;VFR
+Provence;M;011;LFMQ;LFMX;VFR
+Provence;M;012;LFMX;LFMA;VFR
+Feria de Bayonne;M;013;LFMA;LFMP;VFR
+Feria de Bayonne;M;014;LFMP;LFBZ;VFR
+Feria de Bayonne;M;015;LFBZ;LFDG;VFR
+Feria de Bayonne;M;016;LFDG;LFMA;VFR
+Viaduc de Millau;M;017;LFMK;LFCM;VFR
+Viaduc de Millau;M;018;LFCM;LFMT;VFR
+Viaduc de Millau;M;019;LFMT;LFMV;VFR
+Viaduc de Millau;M;020;LFMV;LFMA;VFR
+Aeropostale;M;044;LFCL;LELL;VFR
+Aeropostale;M;045;LELL;LEAL;VFR
+Aeropostale;M;046;LEAL;LEMG;VFR
+Aeropostale;M;047;LEMG;GMTT;VFR
+Aeropostale;M;048;GMTT;GMME;VFR
+Aeropostale;M;049;GMME;GMMN;VFR
+Aeropostale;M;050;GMMN;GMAD;VFR
+Aeropostale;M;051;GMAD;GMML;VFR
+Aeropostale;M;052;GMML;GMMH;VFR
+Aeropostale;M;053;GMMH;GQPP;VFR
+Aeropostale;M;054;GQPP;GOSS;VFR
+Aeropostale;M;055;GOSS;GOOY;VFR
+Aeropostale;M;056;GOOY;SBNT;VFR
+Aeropostale;M;057;SBNT;SBRF;VFR
+Aeropostale;M;058;SBRF;SBSV;VFR
+Aeropostale;M;059;SBSV;SBCV;VFR
+Aeropostale;M;060;SBCV;SBVT;VFR
+Aeropostale;M;061;SBVT;SBRJ;VFR
+Aeropostale;M;062;SBRJ;SBST;VFR
+Aeropostale;M;063;SBST;SBFL;VFR
+Aeropostale;M;064;SBFL;SBPA;VFR
+Aeropostale;M;065;SBPA;SBPK;VFR
+Aeropostale;M;066;SBPK;SUAA;VFR
+Aeropostale;M;067;SUAA;SABE;VFR
+Aeropostale;M;068;SABE;SAME;VFR
+Aeropostale;M;069;SAME;SCLC;VFR
+Maurice Nogues;M;070;LFPB;LFML;VFR
+Maurice Nogues;M;071;LFML;LIRN;VFR
+Maurice Nogues;M;072;LIRN;LGKR;VFR
+Maurice Nogues;M;073;LGKR;LGAV;VFR
+Maurice Nogues;M;074;LGAV;LGKJ;VFR
+Maurice Nogues;M;075;LGKJ;OLKA;VFR
+Maurice Nogues;M;076;OLKA;OSDI;VFR
+Maurice Nogues;M;077;OSDI;ORBI;VFR
+Maurice Nogues;M;078;ORBI;OIBB;VFR
+Maurice Nogues;M;079;OIBB;OIZJ;VFR
+Maurice Nogues;M;080;OIZJ;OPKC;VFR
+Maurice Nogues;M;081;OPKC;VIJO;VFR
+Maurice Nogues;M;082;VIJO;VAAL;VFR
+Maurice Nogues;M;083;VAAL;VECC;VFR
+Maurice Nogues;M;084;VECC;VYSW;VFR
+Maurice Nogues;M;085;VYSW;VYYY;VFR
+Maurice Nogues;M;086;VYYY;VTBD;VFR
+Maurice Nogues;M;087;VTBD;VVTS;VFR
+Maurice Nogues;M;088;VVTS;WSSL;VFR
+Maurice Nogues;M;089;WSSL;WIHH;VFR
+Maurice Nogues;M;090;WIHH;WADD;VFR
+Maurice Nogues;M;091;WADD;WPDL;VFR
+Maurice Nogues;M;092;WPDL;YPDN;VFR
+Maurice Nogues;M;093;YPDN;YBCS;VFR
+Maurice Nogues;M;094;YBCS;YBBN;VFR
+Maurice Nogues;M;095;YBBN;NWWW;VFR
+Maurice Nogues;M;096;NWWW;NFFN;VFR
+Maurice Nogues;M;097;NFFN;NFTF;VFR
+Maurice Nogues;M;098;NFTF;NIUE;VFR
+Maurice Nogues;M;099;NIUE;NCAI;VFR
+Maurice Nogues;M;100;NCAI;NTTB;VFR
+Maurice Nogues;M;101;NTTB;NTAA;VFR
+Grand Rift Africain;M;102;HKLY;HKNI;VFR
+Grand Rift Africain;M;103;HKNI;HTBU;VFR
+Grand Rift Africain;M;104;HTBU;HTSN;VFR
+Grand Rift Africain;M;105;HTSN;HKLT;VFR
+Grand Rift Africain;M;106;HKLT;HKLU;VFR
+Grand Rift Africain;M;107;HKLU;HKNW;VFR
+Bruxelles - Kinshasa;M;108;EBBR;LFSD;VFR
+Bruxelles - Kinshasa;M;109;LFSD;LFLY;VFR
+Bruxelles - Kinshasa;M;110;LFLY;LFMP;VFR
+Bruxelles - Kinshasa;M;111;LFMP;LEAL;VFR
+Bruxelles - Kinshasa;M;112;LEAL;DAOO;VFR
+Bruxelles - Kinshasa;M;113;DAOO;DAOR;VFR
+Bruxelles - Kinshasa;M;114;DAOR;DAUA;VFR
+Bruxelles - Kinshasa;M;115;DAUA;GATS;VFR
+Bruxelles - Kinshasa;M;116;GATS;GAGO;VFR
+Bruxelles - Kinshasa;M;117;GAGO;DRRN;VFR
+Bruxelles - Kinshasa;M;118;DRRN;DRZR;VFR
+Bruxelles - Kinshasa;M;119;DRZR;FTTJ;VFR
+Bruxelles - Kinshasa;M;120;FTTJ;FTTA;VFR
+Bruxelles - Kinshasa;M;121;FTTA;FEFF;VFR
+Bruxelles - Kinshasa;M;122;FEFF;FZEA;VFR
+Bruxelles - Kinshasa;M;123;FZEA;FZAA;VFR
+France - Madagascar;M;133;LFMA;DAAG;VFR
+France - Madagascar;M;134;DAAG;DAUE;VFR
+France - Madagascar;M;135;DAUE;DAAN;VFR
+France - Madagascar;M;136;DAAN;GATS;VFR
+France - Madagascar;M;137;GATS;GAGO;VFR
+France - Madagascar;M;138;GAGO;DRRN;VFR
+France - Madagascar;M;139;DRRN;DRZR;VFR
+France - Madagascar;M;140;DRZR;FTTJ;VFR
+France - Madagascar;M;141;FTTJ;FTTA;VFR
+France - Madagascar;M;142;FTTA;FEFF;VFR
+France - Madagascar;M;143;FEFF;FZEA;VFR
+France - Madagascar;M;144;FZEA;FCBB;VFR
+France - Madagascar;M;145;FCBB;FZUA;VFR
+France - Madagascar;M;146;FZUA;FZSB;VFR
+France - Madagascar;M;147;FZSB;FZQA;VFR
+France - Madagascar;M;148;FZQA;FLKW;VFR
+France - Madagascar;M;149;FLKW;FQTT;VFR
+France - Madagascar;M;150;FQTT;FQQL;VFR
+France - Madagascar;M;151;FQQL;FQLU;VFR
+France - Madagascar;M;152;FQLU;FMMO;VFR
+France - Madagascar;M;153;FMMO;FMMI;VFR
+Compostelle ULM;M;154;LFMA;LFNG;VFR
+Compostelle ULM;M;155;LFNG;LFCK;VFR
+Compostelle ULM;M;156;LFCK;LFDH;VFR
+Compostelle ULM;M;157;LFDH;LFCO;VFR
+Compostelle ULM;M;158;LFCO;LEPP;VFR
+Compostelle ULM;M;159;LEPP;LEBG;VFR
+Compostelle ULM;M;160;LEBG;LELN;VFR
+Compostelle ULM;M;161;LELN;LERO;VFR
+Compostelle ULM;M;162;LERO;LEST;VFR
