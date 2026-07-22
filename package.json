@@ -68,7 +68,7 @@
     "publish": {
       "provider": "github",
       "owner": "brackets-acrobat",
-      "repo": "tours-cavva"
+      "repo": "tours-CAVVA"
     }
   },
   "dependencies": {
