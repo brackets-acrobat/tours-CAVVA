@@ -32,6 +32,10 @@ contextBridge.exposeInMainWorld('tours', {
   apiKeyClear: () => ipcRenderer.invoke('apikey-clear'),
   openAccountPage: () => ipcRenderer.invoke('account-open'),
 
+  // Modale « À propos » : dépôt du code source et version de l'application.
+  openSource: () => ipcRenderer.invoke('source-open'),
+  appVersion: () => ipcRenderer.invoke('app-version'),
+
   // Progression et statistiques (signées côté main)
   progressGet: () => ipcRenderer.invoke('progress-get'),
   progressSet: (tourId, entry) => ipcRenderer.invoke('progress-set', tourId, entry),

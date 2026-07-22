@@ -85,6 +85,7 @@ async function boot() {
   initTourSelect();
   initAwards();
   initApiKey();
+  initAbout();
   initLangToggle();
   document.getElementById('warningClose').addEventListener('click', hideWarning);
 

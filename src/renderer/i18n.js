@@ -21,6 +21,14 @@ const TRANSLATIONS = {
     awardsBtn: 'Badges et statistiques',
     apiKeyBtn: 'Clé API',
     toggleTitle: 'Changer de langue / Switch language',
+
+    // Modale « À propos »
+    aboutTitle: 'À propos',
+    aboutVersion: 'Version {v}',
+    aboutTagline: "L'appli de suivi des tours du Cercle Aéronautique Virtuel Vent Arrière.",
+    aboutLicence: 'Ce logiciel est distribué sous licence GPL-3.0 ou ultérieure.',
+    aboutSource: 'Le code source de cette application est disponible sur GitHub.',
+    aboutCopyright: 'Copyright 2026 Cyril MILANI.',
     loading: 'Chargement des données…',
     legs: 'étapes',
     from: 'Départ',
@@ -105,6 +113,14 @@ const TRANSLATIONS = {
     awardsBtn: 'Awards and statistics',
     apiKeyBtn: 'API key',
     toggleTitle: 'Changer de langue / Switch language',
+
+    // About modal
+    aboutTitle: 'About',
+    aboutVersion: 'Version {v}',
+    aboutTagline: 'The tour tracker of the Cercle Aéronautique Virtuel Vent Arrière.',
+    aboutLicence: 'This software is distributed under the GPL-3.0-or-later licence.',
+    aboutSource: "This application's source code is available on GitHub.",
+    aboutCopyright: 'Copyright 2026 Cyril MILANI.',
     loading: 'Loading data…',
     legs: 'legs',
     from: 'Departure',

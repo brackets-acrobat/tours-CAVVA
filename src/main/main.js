@@ -34,6 +34,10 @@ const apiKeyStore = require('./api-key-store');
 const DATA_DIR = app.isPackaged ? process.resourcesPath : path.resolve(__dirname, '..', '..');
 const AIRPORTS_FILE = path.join(DATA_DIR, 'airports-msfs.jsonl');
 
+// Dépôt du code source, annoncé par la modale « À propos ». La GPL demande que
+// la source soit accessible : cette adresse fait partie de l'application.
+const SOURCE_URL = 'https://github.com/brackets-acrobat/tours-CAVVA';
+
 let mainWindow = null;
 let cachedData = null;
 
@@ -155,9 +159,14 @@ ipcMain.handle('apikey-clear', () => {
   return { ok, status: apiKeyStore.status() };
 });
 
-// Ouverture de la page « Compte » dans le navigateur du système (adresse
-// fixée par l'application, jamais fournie par le renderer).
+// Ouvertures dans le navigateur du système. Les adresses sont fixées ici et
+// ne viennent jamais du renderer : il ne peut pas faire ouvrir n'importe quoi.
 ipcMain.handle('account-open', () => shell.openExternal(toursSource.ACCOUNT_URL));
+ipcMain.handle('source-open', () => shell.openExternal(SOURCE_URL));
+
+// Version affichée par « À propos ». Elle vient de package.json via Electron :
+// une version recopiée à la main dans l'interface finit toujours par mentir.
+ipcMain.handle('app-version', () => app.getVersion());
 ipcMain.handle('sc-connect', () => sim.connecter());
 ipcMain.handle('sc-disconnect', () => sim.deconnecter());
 ipcMain.handle('sc-status', () => ({ connected: sim.estConnecte() }));

@@ -78,6 +78,19 @@ body {
   background: #92400e;
 }
 
+/* « À propos » : un point d'interrogation, carré, discret à côté des autres. */
+.help {
+  width: 36px;
+  padding: 0;
+  background: #475569;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.help:hover {
+  background: #334155;
+}
+
 .key {
   background: #7c3aed;
 }
@@ -556,6 +569,51 @@ body {
 
 .ghost-btn[hidden] {
   display: none;
+}
+
+/* ---------- Modale « À propos » ---------- */
+
+/* Tout est centré : le bloc est court, et une colonne centrée se lit mieux
+   qu'un texte ferré à gauche dans une boîte étroite. */
+.about {
+  text-align: center;
+}
+
+.about p {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.about-nom {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: #1f2933;
+}
+
+/* Version : discrète, collée sous le nom dont elle dépend. */
+.about .about-version {
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.about .about-version[hidden] {
+  display: none;
+}
+
+.about .link-btn {
+  word-break: break-all;
+}
+
+/* Sélecteur descendant : sinon « .about p » ci-dessus l'emporterait sur la
+   marge, à spécificité supérieure. */
+.about .about-copyright {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
 }
 
 /* Bandeau d'alerte (progression rejetée) */

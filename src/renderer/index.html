@@ -14,6 +14,7 @@
       <button id="awardsBtn" class="control btn awards" data-i18n="awardsBtn">Badges et statistiques</button>
       <div class="spacer"></div>
       <span id="tourInfo" class="info"></span>
+      <button id="aboutBtn" class="control btn help" data-i18n-title="aboutTitle">?</button>
       <button
         id="apiKeyBtn"
         class="control btn key"
@@ -129,6 +130,34 @@
       </div>
     </div>
 
+    <!-- Modale « À propos » : nom, licence, code source, copyright. -->
+    <div id="aboutModal" class="modal" hidden>
+      <div id="aboutBackdrop" class="modal-backdrop"></div>
+      <div class="modal-box narrow" role="dialog" aria-modal="true" aria-labelledby="aboutHead">
+        <header class="modal-head">
+          <h2 id="aboutHead" data-i18n="aboutTitle">À propos</h2>
+          <button id="aboutClose" class="modal-close" data-i18n-title="close">×</button>
+        </header>
+        <div class="modal-body about">
+          <h3 class="about-nom">Tours CAVVA</h3>
+          <p id="aboutVersion" class="about-version"></p>
+          <p data-i18n="aboutTagline">
+            L'appli de suivi des tours du Cercle Aéronautique Virtuel Vent Arrière.
+          </p>
+          <p data-i18n="aboutLicence">
+            Ce logiciel est distribué sous licence GPL-3.0 ou ultérieure.
+          </p>
+          <p data-i18n="aboutSource">
+            Le code source de cette application est disponible sur GitHub.
+          </p>
+          <button id="aboutSourceLink" class="link-btn">
+            https://github.com/brackets-acrobat/tours-CAVVA
+          </button>
+          <p class="about-copyright" data-i18n="aboutCopyright">Copyright 2026 Cyril MILANI.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Bibliothèque cartographique (vendorisée) -->
     <script src="vendor/leaflet/leaflet.js"></script>
 
@@ -144,6 +173,7 @@
     <script src="js/features/tour-select.js"></script>
     <script src="js/features/awards.js"></script>
     <script src="js/features/api-key.js"></script>
+    <script src="js/features/about.js"></script>
     <script src="js/features/lang-toggle.js"></script>
 
     <!-- Orchestrateur (câble le tout) -->
