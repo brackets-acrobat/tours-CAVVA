@@ -1,6 +1,6 @@
 {
   "name": "tours-cavva",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Suivi des tours aéronautiques VFR/IFR pour Microsoft Flight Simulator 2024 — bilingue FR/EN",
   "main": "src/main/main.js",
   "author": "Cyril MILANI",
@@ -47,6 +47,8 @@
       "!**/*.md",
       "!tours01.csv",
       "!tours01.csv.sig",
+      "!points01.csv",
+      "!points01.csv.sig",
       "!src/img/**",
       "!airports-msfs.jsonl"
     ],
