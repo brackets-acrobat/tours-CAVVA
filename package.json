@@ -10,6 +10,7 @@
     "force-electron": "node force-electron.js",
     "sign-data": "node build/sign-data.js",
     "verifier-traductions": "node build/verifier-traductions.js",
+    "verifier-publication": "node build/verifier-publication.js",
     "demo-progress": "node build/demo-progress.js",
     "dist": "npm run sign-data && electron-builder",
     "publish": "npm run sign-data && electron-builder --publish always"

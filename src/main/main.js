@@ -16,7 +16,9 @@
 // Tours : téléchargés et vérifiés par tours-source.js (serveur exclusivement),
 // avec la clé API en en-tête — sans clé acceptée, aucune donnée.
 // Aéroports : airports-msfs.jsonl, à la racine du projet (dev) ou dans
-// resources (build packagé).
+// resources (build packagé). Les étapes qui visent un plan d'eau sans
+// hydrobase référencée reçoivent leurs coordonnées de points01.csv, servi et
+// signé comme les tours (points-data.js).
 // ============================================================
 
 const { app, BrowserWindow, ipcMain, shell } = require('electron');
@@ -24,6 +26,7 @@ const path = require('path');
 
 const { parseToursText } = require('./tours-data');
 const { parseAirports } = require('./airports-data');
+const { parsePointsText } = require('./points-data');
 const { SimConnectClient } = require('./simconnect');
 const toursSource = require('./tours-source');
 const progressStore = require('./progress-store');
@@ -60,8 +63,30 @@ async function loadData() {
   const { text } = await toursSource.resolveTours(apiKeyStore.get());
   const { tours, neededCodes } = parseToursText(text);
   console.log(`[tours] ${tours.length} tours téléchargés`);
+
   const airports = await parseAirports(AIRPORTS_FILE, neededCodes);
-  cachedData = { tours, airports };
+
+  // Points de passage hors base MSFS : ils rejoignent le même dictionnaire et
+  // priment, un point publié à la main étant plus à jour que la base du
+  // simulateur. Fichier facultatif — tous les tours n'en ont pas besoin.
+  const points = await toursSource.resolvePoints(apiKeyStore.get());
+  if (points) {
+    const { points: personnalises, rejets } = parsePointsText(points.text, neededCodes);
+    Object.assign(airports, personnalises);
+    console.log(`[points] ${Object.keys(personnalises).length} point(s) hors base MSFS`);
+    rejets.forEach((r) => console.warn('[points] ligne écartée —', r));
+  }
+
+  // Un code qu'aucune des deux sources ne résout laisse un trou dans le tracé
+  // et une étape invalidable : il vaut mieux que ce soit dit.
+  const orphelins = [...neededCodes].filter((c) => !airports[c]);
+  if (orphelins.length) {
+    console.warn(`[tours] ${orphelins.length} code(s) sans coordonnées :`, orphelins.join(', '));
+  }
+
+  // `orphelins` remonte au renderer : la console du terminal est invisible dans
+  // l'application packagée, et un tour amputé doit se voir à l'écran.
+  cachedData = { tours, airports, orphelins };
   return cachedData;
 }
 

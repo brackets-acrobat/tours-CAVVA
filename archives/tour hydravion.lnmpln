@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>7000</CruisingAlt>
+      <CruisingAltF>7000.00000000</CruisingAltF>
+      <CreationDate>2026-07-23T14:47:40+02:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.18</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <FilePath>A2A Piper Aerostar PA-60-600_optimized.lnmperf</FilePath>
+      <Type>AEST</Type>
+      <Name>A2A Piper Aerostar PA-60-600 Optimized</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Vancouver Harbour Water Aerodrome</Name>
+        <Ident>CYHC</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-123.111389" Lat="49.294445" Alt="-3.40"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Powell Lake Seaplane Base</Name>
+        <Ident>CAQ8</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-124.533333" Lat="49.883335" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gold River Seaplane Base</Name>
+        <Ident>CAU6</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-126.116669" Lat="49.683334" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Port McNeill Seaplane Base</Name>
+        <Ident>CAM8</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-127.099998" Lat="50.583332" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ocean Falls Seaplane Base</Name>
+        <Ident>CAH2</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-127.716667" Lat="52.366665" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hartley Bay Seaplane Base</Name>
+        <Ident>CAY4</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-129.250000" Lat="53.416668" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prince Rupert/Seal Cove Seaplane Base</Name>
+        <Ident>CZSW</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-130.283340" Lat="54.333332" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peninsula Point Pullout Seaplane Base</Name>
+        <Ident>9C0</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-131.738358" Lat="55.384651" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lloyd R. Roundtree Seaplane Facility Seaplane Base</Name>
+        <Ident>63A</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-132.960052" Lat="56.811317" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Juneau Harbor</Name>
+        <Ident>5Z1</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-134.408112" Lat="58.290535" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Ident>WP1</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-137.034286" Lat="59.045147" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yakutat</Name>
+        <Ident>2Y3</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-139.749939" Lat="59.577694" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Ident>WP2</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-143.429214" Lat="60.101532" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ellamar</Name>
+        <Ident>1Z9</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-146.703690" Lat="60.893909" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lost Lake Spb</Name>
+        <Ident>57AK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-149.992142" Lat="61.337536" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Ident>WP3</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.012955" Lat="60.213898" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seal Bay Seaplane Base</Name>
+        <Ident>SYB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-152.201935" Lat="58.373123" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Brooks</Name>
+        <Ident>5Z9</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-155.777390" Lat="58.554844" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Ident>WP4</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-156.447449" Lat="57.331024" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Ident>WP5</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-158.547760" Lat="56.324986" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Herendeen Bay</Name>
+        <Ident>AK33</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-160.899246" Lat="55.801395" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Ident>WP6</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-163.326675" Lat="54.965256" Alt="7000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Akutan</Name>
+        <Ident>KQA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-165.778381" Lat="54.133900" Alt="-0.09"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

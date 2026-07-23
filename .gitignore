@@ -4,6 +4,10 @@
 # Sorties de build (installateurs, application decompressee).
 /dist/
 
+# Metadonnees de publication ecrites par electron-builder : refaites a chaque
+# construction, et valables pour un seul artefact.
+/latest.yml
+
 # Journaux npm et rejets d'editeurs.
 npm-debug.log*
 *.log

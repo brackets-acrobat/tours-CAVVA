@@ -65,7 +65,10 @@ function addDot(code, ap, seen) {
     fillColor: '#e11900',
     fillOpacity: 1,
   });
-  marker.bindTooltip(`<span class="waypoint-label">${code}</span> — ${ap.name}`, {
+  // Un point sans nom (points01.csv) retombe sur son code : inutile de
+  // l'écrire deux fois.
+  const etiquette = `<span class="waypoint-label">${code}</span>`;
+  marker.bindTooltip(ap.name && ap.name !== code ? `${etiquette} — ${ap.name}` : etiquette, {
     direction: 'top',
   });
   marker.addTo(routeLayer);

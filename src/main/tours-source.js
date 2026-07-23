@@ -21,8 +21,9 @@
 // refusée » de « hors ligne » — deux situations que l'utilisateur ne corrige
 // pas de la même manière.
 //
-// Publier une mise à jour : npm run sign-data, puis déposer tours01.csv ET
-// tours01.csv.sig sur le serveur.
+// Publier une mise à jour : npm run sign-data, puis déposer sur le serveur
+// tours01.csv ET tours01.csv.sig — plus points01.csv et points01.csv.sig si des
+// étapes visent des coordonnées hors base MSFS.
 // ============================================================
 
 // Racine du site. CAVVA_BASE_URL permet de viser une instance locale le temps
@@ -32,6 +33,10 @@ const BASE_URL = (process.env.CAVVA_BASE_URL || 'https://cavva.sixk.me').replace
 
 const TOURS_URL = BASE_URL + '/tours-cavva/tours01.csv';
 const SIG_URL = TOURS_URL + '.sig';
+// Points de passage hors base MSFS (points-data.js). Facultatif : un serveur
+// qui n'en publie pas répond 404, et les tours se chargent quand même.
+const POINTS_URL = BASE_URL + '/tours-cavva/points01.csv';
+const POINTS_SIG_URL = POINTS_URL + '.sig';
 const BADGES_URL = BASE_URL + '/badges/';
 const ACCOUNT_URL = BASE_URL + '/compte'; // page où la clé est générée
 const TIMEOUT_MS = 10000;
@@ -57,7 +62,9 @@ function headers(apiKey) {
   return h;
 }
 
-async function download(url, apiKey) {
+// `absentAdmis` : un 404 renvoie null au lieu de lever — pour une ressource
+// facultative, dont l'absence est un état légitime et non une panne.
+async function download(url, apiKey, absentAdmis) {
   let res;
   try {
     res = await fetch(url, {
@@ -69,6 +76,7 @@ async function download(url, apiKey) {
     throw fail('network', `${url} : ${e.message}`);
   }
   if (res.status === 401 || res.status === 403) throw fail('unauthorized', `${url} : HTTP ${res.status}`);
+  if (res.status === 404 && absentAdmis) return null;
   if (!res.ok) throw fail('network', `${url} : HTTP ${res.status}`);
   return Buffer.from(await res.arrayBuffer());
 }
@@ -89,6 +97,25 @@ async function resolveTours(apiKey) {
 
   if (!verify(csv, signature, 'data')) throw fail('signature', 'signature invalide');
   if (!looksValid(csv)) throw fail('content', 'contenu inexploitable');
+
+  return { text: csv.toString('latin1') };
+}
+
+// Renvoie { text } pour les points de passage, ou null si le serveur n'en
+// publie pas (404). Même exigence de signature que les tours dès lors que le
+// fichier existe : ces coordonnées décident où une étape est validée.
+async function resolvePoints(apiKey) {
+  if (!apiKey) throw fail('nokey', 'aucune clé API enregistrée');
+
+  const [csv, sigRaw] = await Promise.all([
+    download(POINTS_URL, apiKey, true),
+    download(POINTS_SIG_URL, apiKey, true),
+  ]);
+  if (!csv) return null;
+  if (!sigRaw) throw fail('signature', 'points01.csv publié sans sa signature');
+
+  const signature = sigRaw.toString('utf8').trim().split(/\s+/)[0];
+  if (!verify(csv, signature, 'data')) throw fail('signature', 'signature invalide (points01.csv)');
 
   return { text: csv.toString('latin1') };
 }
@@ -125,4 +152,13 @@ async function fetchBadge(name, apiKey) {
   return `data:${MIME[ext] || 'image/png'};base64,${buf.toString('base64')}`;
 }
 
-module.exports = { resolveTours, checkKey, fetchBadge, TOURS_URL, BADGES_URL, ACCOUNT_URL };
+module.exports = {
+  resolveTours,
+  resolvePoints,
+  checkKey,
+  fetchBadge,
+  TOURS_URL,
+  POINTS_URL,
+  BADGES_URL,
+  ACCOUNT_URL,
+};

@@ -9,6 +9,8 @@
 # encode en Windows-1252, pas en UTF-8.
 tours01.csv -text
 tours01.csv.sig -text
+points01.csv -text
+points01.csv.sig -text
 
 # Donnees des aeroports : 70 Mo lus ligne a ligne. Traitees comme un binaire,
 # git n'essaie ni de les normaliser ni d'en calculer un diff.

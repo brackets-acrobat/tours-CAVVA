@@ -22,14 +22,18 @@ let toursData = { tours: [], airports: {} };
 // Affiche un message traduit ; onAction (facultatif) ajoute un bouton, dont
 // le libellé est « Réessayer » sauf indication contraire (par exemple
 // « Saisir la clé » quand c'est la clé API qui manque).
-function showWarning(key, onAction, actionKey) {
+// params (facultatif) remplit un message à trous ; il est conservé sur
+// l'élément pour que la bascule de langue le retrouve.
+function showWarning(key, onAction, actionKey, params) {
   const bar = document.getElementById('dataWarning');
   const text = document.getElementById('warningText');
   const retry = document.getElementById('warningRetry');
   const label = actionKey || 'retry';
 
   text.dataset.i18n = key; // re-traduit à la bascule de langue
-  text.textContent = t(key);
+  if (params) text.dataset.i18nParams = JSON.stringify(params);
+  else delete text.dataset.i18nParams;
+  text.textContent = params ? tp(key, params) : t(key);
   retry.dataset.i18n = label;
   retry.textContent = t(label);
   retry.hidden = !onAction;
@@ -66,7 +70,19 @@ async function loadTours() {
   }
 
   toursData = data;
-  hideWarning();
+
+  // Les tours sont là, mais certains codes d'étapes n'ont pas de coordonnées
+  // (points01.csv absent du serveur, ou code absent du fichier). Le tour
+  // concerné s'affiche amputé : sans ce bandeau, la seule trace est dans la
+  // console du terminal, que personne ne voit dans l'application packagée.
+  const orphelins = data.orphelins || [];
+  if (orphelins.length) {
+    const apercu = orphelins.slice(0, 8).join(', ') + (orphelins.length > 8 ? '…' : '');
+    showWarning('missingCoords', loadTours, null, { n: orphelins.length, codes: apercu });
+  } else {
+    hideWarning();
+  }
+
   if (typeof window._refreshTourSelect === 'function') window._refreshTourSelect();
   return true;
 }

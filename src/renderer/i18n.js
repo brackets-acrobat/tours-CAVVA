@@ -47,6 +47,8 @@ const TRANSLATIONS = {
       'La progression enregistrée a été rejetée (fichier modifié). Les tours repartent de zéro.',
     toursUnavailable:
       'Impossible de télécharger les tours. Vérifiez votre connexion : les données sont servies en ligne, comme MSFS 2024.',
+    missingCoords:
+      "{n} point(s) d'étape sans coordonnées ({codes}) : les étapes concernées s'affichent sans tracé et ne peuvent pas être validées.",
     progressUnreadable:
       "La progression enregistrée n'a pas pu être lue. Elle n'est pas perdue : relancez l'application.",
     retry: 'Réessayer',
@@ -140,6 +142,8 @@ const TRANSLATIONS = {
       'Saved progress was rejected (file modified). All tours start over from scratch.',
     toursUnavailable:
       'Could not download the tours. Check your connection: the data is served online, just like MSFS 2024.',
+    missingCoords:
+      '{n} leg point(s) have no coordinates ({codes}): the legs concerned are drawn incomplete and cannot be validated.',
     progressUnreadable:
       'Saved progress could not be read. It is not lost: restart the application.',
     retry: 'Retry',
@@ -257,7 +261,16 @@ function tourLabel(tour) {
 function applyTranslations() {
   document.documentElement.lang = currentLang;
   document.querySelectorAll('[data-i18n]').forEach((el) => {
-    el.textContent = t(el.getAttribute('data-i18n'));
+    // data-i18n-params (JSON) : message à trous, dont les valeurs doivent
+    // survivre à la bascule de langue.
+    let params = null;
+    try {
+      params = el.dataset.i18nParams ? JSON.parse(el.dataset.i18nParams) : null;
+    } catch (_) {
+      /* paramètres illisibles : message brut */
+    }
+    const key = el.getAttribute('data-i18n');
+    el.textContent = params ? tp(key, params) : t(key);
   });
   document.querySelectorAll('[data-i18n-title]').forEach((el) => {
     el.title = t(el.getAttribute('data-i18n-title'));
