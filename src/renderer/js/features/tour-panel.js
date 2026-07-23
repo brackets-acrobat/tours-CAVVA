@@ -6,7 +6,7 @@
 // ============================================================
 // tour-panel.js — panneau gauche : tableau des étapes + progression.
 // Ouvert par « Sélectionner ce tour ». Affiche les étapes (numéro, ICAO
-// départ/arrivée, distance nm), gère la progression persistée (fichier signé
+// départ/arrivée, régime de vol, distance nm), gère la progression persistée (fichier signé
 // côté main, voir progress-store.js),
 // l'état des lignes (courante / en cours / validée), le bouton
 // « Commencer / Continuer le tour » et la zone de statut. Le suivi
@@ -153,10 +153,11 @@ function renderTable() {
     tr.dataset.index = String(i);
     const d = legDistanceNm(leg);
     tr.innerHTML =
-      `<td class="num">${i + 1}</td>` +
+      `<td>${i + 1}</td>` +
       `<td>${leg.from}</td>` +
       `<td>${leg.to}</td>` +
-      `<td class="num">${d == null ? '—' : d.toFixed(1)}</td>`;
+      `<td>${leg.regime || '—'}</td>` +
+      `<td>${d == null ? '—' : d.toFixed(1)}</td>`;
     if (completed.has(i)) tr.classList.add('done');
     body.appendChild(tr);
   });

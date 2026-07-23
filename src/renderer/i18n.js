@@ -92,6 +92,7 @@ const TRANSLATIONS = {
     colLeg: 'Étape',
     colFrom: 'Départ',
     colTo: 'Arrivée',
+    colRegime: 'Régime de vol',
     colDist: 'Distance (nm)',
 
     // Statuts SimConnect / validation
@@ -182,6 +183,7 @@ const TRANSLATIONS = {
     colLeg: 'Leg',
     colFrom: 'Departure',
     colTo: 'Arrival',
+    colRegime: 'Flight rules',
     colDist: 'Distance (nm)',
 
     // SimConnect / validation statuses

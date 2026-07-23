@@ -230,20 +230,16 @@ body {
   background: #1f2933;
   color: #fff;
   padding: 8px 10px;
-  text-align: left;
+  text-align: center;
   font-weight: 600;
   white-space: nowrap;
-}
-
-#legsTable th.num,
-#legsTable td.num {
-  text-align: right;
 }
 
 #legsTable tbody td {
   padding: 7px 10px;
   border-bottom: 1px solid #e2e8f0;
   color: #1f2933;
+  text-align: center;
 }
 
 /* Étape sélectionnée (courante, non commencée) */
