@@ -159,6 +159,20 @@
       </div>
     </div>
 
+    <!-- Modale « Nouveaux tours » : tours ajoutés depuis le dernier lancement. -->
+    <div id="newToursModal" class="modal" hidden>
+      <div id="newToursBackdrop" class="modal-backdrop"></div>
+      <div class="modal-box narrow" role="dialog" aria-modal="true" aria-labelledby="newToursHead">
+        <header class="modal-head">
+          <h2 id="newToursHead" data-i18n="newToursTitle">Nouveau(x) tour(s) disponible(s) :</h2>
+          <button id="newToursClose" class="modal-close" data-i18n-title="close">×</button>
+        </header>
+        <div class="modal-body">
+          <ul id="newToursList" class="new-tours-list"></ul>
+        </div>
+      </div>
+    </div>
+
     <!-- Bibliothèque cartographique (vendorisée) -->
     <script src="vendor/leaflet/leaflet.js"></script>
 
@@ -175,6 +189,7 @@
     <script src="js/features/awards.js"></script>
     <script src="js/features/api-key.js"></script>
     <script src="js/features/about.js"></script>
+    <script src="js/features/new-tours.js"></script>
     <script src="js/features/lang-toggle.js"></script>
 
     <!-- Orchestrateur (câble le tout) -->

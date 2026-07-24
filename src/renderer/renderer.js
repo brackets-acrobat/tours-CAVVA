@@ -102,15 +102,43 @@ async function boot() {
   initAwards();
   initApiKey();
   initAbout();
+  initNewTours();
   initLangToggle();
   document.getElementById('warningClose').addEventListener('click', hideWarning);
 
   const ok = await loadTours();
 
+  // Nouveaux tours depuis le dernier lancement : modale dédiée (indépendante du
+  // bandeau ci-dessous). Ne s'ouvre qu'au-delà du premier démarrage.
+  if (ok) notifyNewTours(toursData.tours);
+
   // Progression illisible ou rejetée : on le signale, sinon l'utilisateur voit
   // des statistiques à zéro sans la moindre explication.
   if (ok && progress.tampered) showWarning('progressTampered');
   else if (ok && progress.erreur) showWarning('progressUnreadable');
+
+  // Vérification de mise à jour en dernier : purement informative, elle ne doit
+  // ni retarder le démarrage (non attendue) ni recouvrir un avertissement déjà
+  // affiché (une erreur prime sur une invitation à mettre à jour).
+  maybeNotifyUpdate();
+}
+
+// Affiche le bandeau de mise à jour si une version plus récente est publiée et
+// que rien d'autre n'occupe déjà le bandeau. Silencieuse sur échec : hors
+// ligne, l'application n'a de toute façon rien à faire.
+async function maybeNotifyUpdate() {
+  try {
+    if (!document.getElementById('dataWarning').hidden) return;
+    const u = await window.tours.checkUpdate();
+    if (u && u.newer && document.getElementById('dataWarning').hidden) {
+      showWarning('updateAvailable', () => window.tours.openReleases(), 'updateDownload', {
+        latest: u.latest,
+        current: u.current,
+      });
+    }
+  } catch (e) {
+    console.error('Vérification de mise à jour impossible :', e && (e.message || e));
+  }
 }
 
 // Une exception ici laisserait une fenêtre inerte sans le moindre message :

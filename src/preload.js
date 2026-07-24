@@ -36,6 +36,11 @@ contextBridge.exposeInMainWorld('tours', {
   openSource: () => ipcRenderer.invoke('source-open'),
   appVersion: () => ipcRenderer.invoke('app-version'),
 
+  // Mise à jour : la question au démarrage, et l'ouverture de la page des
+  // versions (adresse détenue par le process principal, cf. main.js).
+  checkUpdate: () => ipcRenderer.invoke('update-check'),
+  openReleases: () => ipcRenderer.invoke('releases-open'),
+
   // Progression et statistiques (signées côté main)
   progressGet: () => ipcRenderer.invoke('progress-get'),
   progressSet: (tourId, entry) => ipcRenderer.invoke('progress-set', tourId, entry),

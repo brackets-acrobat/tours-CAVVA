@@ -370,6 +370,18 @@ body {
   padding: 16px;
 }
 
+/* Liste des nouveaux tours (modale de démarrage) */
+.new-tours-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.new-tours-list li {
+  margin: 6px 0;
+  font-weight: 600;
+  color: #1f2933;
+}
+
 /* Tuiles de totaux (heures, distance, étapes, tours) */
 .stats-grid {
   display: grid;

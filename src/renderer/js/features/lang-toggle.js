@@ -30,5 +30,6 @@ function initLangToggle() {
     if (typeof window._refreshAwards === 'function') window._refreshAwards();
     if (typeof window._refreshApiKey === 'function') window._refreshApiKey();
     if (typeof window._refreshAbout === 'function') window._refreshAbout();
+    if (typeof window._refreshNewTours === 'function') window._refreshNewTours();
   });
 }

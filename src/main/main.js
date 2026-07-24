@@ -31,6 +31,7 @@ const { SimConnectClient } = require('./simconnect');
 const toursSource = require('./tours-source');
 const progressStore = require('./progress-store');
 const apiKeyStore = require('./api-key-store');
+const { checkForUpdate } = require('./update-check');
 
 // Dossier des données source : racine du projet en dev, dossier resources
 // (extraResources) une fois l'application packagée.
@@ -188,6 +189,14 @@ ipcMain.handle('apikey-clear', () => {
 // ne viennent jamais du renderer : il ne peut pas faire ouvrir n'importe quoi.
 ipcMain.handle('account-open', () => shell.openExternal(toursSource.ACCOUNT_URL));
 ipcMain.handle('source-open', () => shell.openExternal(SOURCE_URL));
+// Page des versions publiées. Adresse fixée ici, jamais transmise par le
+// renderer : le bouton « Télécharger » du bandeau de mise à jour n'ouvre que
+// celle-ci.
+ipcMain.handle('releases-open', () => shell.openExternal(SOURCE_URL + '/releases/latest'));
+
+// « Une version plus récente est-elle publiée ? » — renvoie
+// { current, latest, newer } ou null (hors ligne, quota…). Ne télécharge rien.
+ipcMain.handle('update-check', () => checkForUpdate());
 
 // Version affichée par « À propos ». Elle vient de package.json via Electron :
 // une version recopiée à la main dans l'interface finit toujours par mentir.

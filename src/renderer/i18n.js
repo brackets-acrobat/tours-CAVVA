@@ -51,6 +51,9 @@ const TRANSLATIONS = {
       "{n} point(s) d'étape sans coordonnées ({codes}) : les étapes concernées s'affichent sans tracé et ne peuvent pas être validées.",
     progressUnreadable:
       "La progression enregistrée n'a pas pu être lue. Elle n'est pas perdue : relancez l'application.",
+    updateAvailable: 'Nouvelle version disponible : {latest} (vous utilisez la {current}).',
+    updateDownload: 'Télécharger',
+    newToursTitle: 'Nouveau(x) tour(s) disponible(s) :',
     retry: 'Réessayer',
 
     // Modale « Clé API »
@@ -149,6 +152,9 @@ const TRANSLATIONS = {
       '{n} leg point(s) have no coordinates ({codes}): the legs concerned are drawn incomplete and cannot be validated.',
     progressUnreadable:
       'Saved progress could not be read. It is not lost: restart the application.',
+    updateAvailable: 'A new version is available: {latest} (you are running {current}).',
+    updateDownload: 'Download',
+    newToursTitle: 'New tour(s) available:',
     retry: 'Retry',
 
     // API key modal
