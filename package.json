@@ -12,6 +12,7 @@
     "verifier-traductions": "node build/verifier-traductions.js",
     "verifier-publication": "node build/verifier-publication.js",
     "demo-progress": "node build/demo-progress.js",
+    "test-hydravion": "node build/test-hydravion.js",
     "dist": "npm run sign-data && electron-builder",
     "publish": "npm run sign-data && electron-builder --publish always"
   },
