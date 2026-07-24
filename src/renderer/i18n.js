@@ -105,9 +105,12 @@ const TRANSLATIONS = {
     legValidated: 'Étape {n} validée ✔',
     tourComplete: 'Tour terminé ! 🎉',
     notAtArrival: 'Non validé : {reasons}.',
+    notSecured:
+      "Non validé : à l'arrêt, 2 conditions sur 3 requises (frein serré, moteur coupé, vitesse < 5 kt). Manque : {reasons}.",
     reasonDistance: 'à {d} NM de {icao}',
     reasonEngine: 'moteur tournant',
     reasonBrake: 'frein de parking desserré',
+    reasonSpeed: 'vitesse {kt} kt',
   },
   en: {
     appTitle: 'Tour tracker',
@@ -198,9 +201,12 @@ const TRANSLATIONS = {
     legValidated: 'Leg {n} validated ✔',
     tourComplete: 'Tour complete! 🎉',
     notAtArrival: 'Not validated: {reasons}.',
+    notSecured:
+      'Not validated: when stopped, 2 of 3 conditions required (parking brake set, engine off, speed < 5 kt). Missing: {reasons}.',
     reasonDistance: '{d} NM from {icao}',
     reasonEngine: 'engine running',
     reasonBrake: 'parking brake released',
+    reasonSpeed: 'speed {kt} kt',
   },
 };
 

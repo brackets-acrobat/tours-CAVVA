@@ -10,9 +10,14 @@
 //   idle     → clic : connexion MSFS, vérification de la position de départ
 //   awaiting → position vérifiée (≤ 2,5 NM du départ, au sol) : passage « en
 //              route », tracé du trajet parcouru + marqueur avion
-//   enroute  → clic « Finaliser » : validation d'arrivée (≤ 2,5 NM de l'arrivée,
-//              moteur coupé, frein de parking serré) → étape grisée, étape
+//   enroute  → clic « Finaliser » : validation d'arrivée (≤ 2,5 NM de
+//              l'arrivée, PLUS 2 conditions d'arrêt sur 3 — frein de parking
+//              serré, moteur coupé, vitesse < 5 kt) → étape grisée, étape
 //              suivante ; sinon message expliquant ce qui manque.
+//
+// Le « 2 sur 3 » remplace un « et » strict : tous les appareils n'ont pas de
+// frein de parking (hydravions), mais un avion réellement arrivé remplit
+// toujours au moins deux des trois.
 //
 // Rayon de validation : 2,5 NM (choix utilisateur). S'appuie sur les fonctions
 // globales de tour-panel.js (getPanelTour, getCurrentLegIndex, setLegActive,
@@ -21,6 +26,7 @@
 
 const DEPARTURE_NM = 2.5; // rayon de vérification du départ
 const ARRIVAL_NM = 2.5; // rayon de validation de l'arrivée
+const ARRIVAL_MAX_SPEED_KT = 5; // « à l'arrêt » : vitesse sol sous ce seuil
 
 let phase = 'idle'; // 'idle' | 'awaiting' | 'enroute'
 let trackingIndex = -1; // index de l'étape suivie
@@ -198,15 +204,24 @@ function finishLeg() {
   const leg = tour.legs[trackingIndex];
   const arr = airportOf(leg.to);
 
-  // Critères : ≤ 2,5 NM de l'arrivée, moteur coupé, frein de parking serré.
-  const reasons = [];
+  // Distance : condition ferme, il faut être arrivé.
   const d = arr ? haversineNm(lastFrame.lat, lastFrame.lon, arr.lat, arr.lon) : Infinity;
-  if (d > ARRIVAL_NM) reasons.push(tp('reasonDistance', { d: d.toFixed(1), icao: leg.to }));
-  if (lastFrame.engineOn) reasons.push(t('reasonEngine'));
-  if (!lastFrame.parkingBrake) reasons.push(t('reasonBrake'));
+  if (d > ARRIVAL_NM) {
+    setStatus(tp('notAtArrival', { reasons: tp('reasonDistance', { d: d.toFixed(1), icao: leg.to }) }));
+    return;
+  }
 
-  if (reasons.length) {
-    setStatus(tp('notAtArrival', { reasons: reasons.join(', ') }));
+  // Arrêt à l'arrivée : 2 des 3 conditions suffisent. On liste celles qui
+  // manquent ; le refus tombe dès que 2 manquent (donc au plus 1 remplie).
+  const manques = [];
+  if (!lastFrame.parkingBrake) manques.push(t('reasonBrake'));
+  if (lastFrame.engineOn) manques.push(t('reasonEngine'));
+  if (lastFrame.groundSpeedKt > ARRIVAL_MAX_SPEED_KT) {
+    manques.push(tp('reasonSpeed', { kt: Math.round(lastFrame.groundSpeedKt) }));
+  }
+
+  if (manques.length >= 2) {
+    setStatus(tp('notSecured', { reasons: manques.join(', ') }));
     return;
   }
 
